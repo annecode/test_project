@@ -7,9 +7,11 @@
 
 import unittest
 from test_case.test_group import TestGroup
+from test_case.test_config import TestDeviceConfig
 
 
 if __name__ == '__main__':
     suite1 = unittest.TestLoader().loadTestsFromTestCase(TestGroup)
-    suite = unittest.TestSuite([suite1])
+    suite2 = unittest.TestLoader().loadTestsFromTestCase(TestDeviceConfig)
+    suite = unittest.TestSuite([suite2])
     unittest.TextTestRunner(verbosity=2).run(suite)

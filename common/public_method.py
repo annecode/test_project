@@ -44,7 +44,7 @@ def random_letter_number(length=10, combination_type=0):
         for i in range(len_of_number):
             number_list.append(random.choice(string.digits))
         combination_list = letter_list + number_list
-        random.shuffle(combination_list)
+        random.shuffle(combination_list)  # 将列表的元素随机排序
         return "".join(combination_list)
     elif com_type == 1:
         for i in range(length):
