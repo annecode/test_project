@@ -26,14 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b00cb29d-a8c5-4868-8c5d-37ebe4af0ca4" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/common/http_requests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_case/test_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyRobotFramework/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRobotFramework/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyRobotFramework/group.robot" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRobotFramework/group.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/public_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/public_method.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/run_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/run_test_class.py" afterDir="false" />
-    </list>
+    <list default="true" id="b00cb29d-a8c5-4868-8c5d-37ebe4af0ca4" name="默认的" comment="" />
     <list id="d4f2da1b-b788-4529-96a4-a1eebad09b6e" name="'company-tag-1'" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +61,7 @@
       </set>
     </option>
   </component>
+  <component name="JupyterTrust" id="5b16a912-7c06-43ba-967e-9e412991d05b" />
   <component name="ProjectId" id="1l89TnJhe9wgCxi49qzgGLFp0mO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="新增" />
@@ -80,9 +74,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MyPython" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -91,7 +89,7 @@
       </console-settings>
     </option>
   </component>
-  <component name="RunManager" selected="Python 测试.Unittest for test_config.TestDeviceConfig.test_getRow">
+  <component name="RunManager" selected="Python.http_requests">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="papi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,6 +102,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -125,6 +124,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/http_requests.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -146,6 +146,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/run_test_class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -164,6 +165,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
     <configuration name="Unittest for test_config.TestDeviceConfig.test_getRow" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -175,6 +177,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_config.TestDeviceConfig.test_getRow&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
@@ -189,6 +192,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_config.TestDeviceConfig.test_skuChange&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
@@ -203,6 +207,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/test_group.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
@@ -217,6 +222,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -235,6 +241,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
@@ -242,14 +249,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.http_requests" />
+        <item itemvalue="Python 测试.Unittest in test_group.py" />
         <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_getRow" />
         <item itemvalue="Python.run_test_class" />
         <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_skuChange" />
-        <item itemvalue="Python.http_requests" />
-        <item itemvalue="Python 测试.Unittest in test_group.py" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -261,6 +269,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606967861635</updated>
+      <workItem from="1607135727525" duration="1428000" />
+      <workItem from="1607137237777" duration="397000" />
     </task>
     <task id="LOCAL-00001" summary="测试框架初步搭建">
       <created>1607001373452</created>
@@ -271,6 +281,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -324,22 +337,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607054729475" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1607081054434">
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1607137158771">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607081054434" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1607081054434">
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
+    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1607137158771">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607081054434" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1607081054434">
+    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
+    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1607137158771">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607081054434" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1607081054434">
+    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1607137158771">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607081054434" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
     <state width="1493" height="246" key="GridCell.Tab.1.bottom" timestamp="1607078754713">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -356,10 +369,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="246" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1607078754713" />
-    <state x="519" y="124" key="SettingsEditor" timestamp="1607064443402">
+    <state x="519" y="124" key="SettingsEditor" timestamp="1607136979639">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="519" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607064443402" />
+    <state x="519" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607136979639" />
     <state x="93" y="93" width="1350" height="648" key="ShowDiffWithBranchDialog" timestamp="1607001602215">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -384,5 +397,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607072931917" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/test_project$http_requests.coverage" NAME="http_requests Coverage Results" MODIFIED="1607137418340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/test_project$Unittest_in_test_group_py.coverage" NAME="Unittest in test_group.py Coverage Results" MODIFIED="1607137045923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
+    <SUITE FILE_PATH="coverage/test_project$Unittest_for_test_config_TestDeviceConfig_test_getRow.coverage" NAME="Unittest for test_config.TestDeviceConfig.test_getRow Coverage Results" MODIFIED="1607136632177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
   </component>
 </project>

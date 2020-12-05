@@ -45,7 +45,7 @@ class TestGroup(unittest.TestCase):
           "subTitle": f"ANNE-{random_letter_number(4, 0)}",
           "type": "1",  # 1导购区，2新品区
           "sort": "3",
-          "picture": "https://bluemart.oss-ap-southeast-1.aliyuncs.com/upload/bluemart/20200702/1593682774284.png",
+          "picture": "http://httpbin.org/",
           "startTime": f"{time_mktime()}",
           "endTime": f"{time_mktime(1)}"
         }

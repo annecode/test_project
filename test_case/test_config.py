@@ -13,7 +13,7 @@ class TestDeviceConfig(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
-        cls.host = 'http://192.168.4.102:21801'
+        cls.host = 'http://httpbin.org'
 
     @classmethod
     def tearDownClass(cls) -> None:
@@ -26,7 +26,7 @@ class TestDeviceConfig(unittest.TestCase):
         obj.get(url, params)
 
     def test_getRow(self):
-        params = {"deviceCode": "bpanne02", "cardSlot": 20}
-        url = '/pms/skuChange/getRow'
+        params = {"name": "anne", "age": 20}
+        url = '/post/anything'
         obj = HttpRequests(TestDeviceConfig.host)
         obj.post(url, params, body='form')
