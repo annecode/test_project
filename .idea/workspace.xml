@@ -89,7 +89,11 @@
       </console-settings>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python 测试.Unittest for test_group.TestGroup.test_shoppingArea_store">
+=======
+  <component name="RunManager" selected="Python.http_requests">
+>>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="papi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,6 +138,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+=======
+    <configuration name="run_test_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/run_test_class.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+>>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
     <configuration default="true" type="Tox" factoryName="Tox">
       <module name="papi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -242,11 +271,19 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Python 测试.Unittest for test_group.TestGroup.test_shoppingArea_store" />
         <item itemvalue="Python 测试.Unittest in test_group.py" />
         <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_skuChange" />
         <item itemvalue="Python.http_requests" />
         <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_getRow" />
+=======
+        <item itemvalue="Python.http_requests" />
+        <item itemvalue="Python 测试.Unittest in test_group.py" />
+        <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_getRow" />
+        <item itemvalue="Python.run_test_class" />
+        <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_skuChange" />
+>>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +300,11 @@
       <option name="presentableId" value="Default" />
       <updated>1606967861635</updated>
       <workItem from="1607135727525" duration="1428000" />
+<<<<<<< HEAD
       <workItem from="1607137237777" duration="872000" />
+=======
+      <workItem from="1607137237777" duration="397000" />
+>>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
     </task>
     <task id="LOCAL-00001" summary="测试框架初步搭建">
       <created>1607001373452</created>
@@ -334,6 +375,7 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607054729475" />
+<<<<<<< HEAD
     <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1607138102569">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -350,6 +392,24 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607138102569" />
+=======
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1607137158771">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
+    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1607137158771">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
+    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1607137158771">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1607137158771">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
+>>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
     <state width="1493" height="246" key="GridCell.Tab.1.bottom" timestamp="1607078754713">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -366,10 +426,17 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="246" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1607078754713" />
+<<<<<<< HEAD
     <state x="519" y="124" key="SettingsEditor" timestamp="1607137598943">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="519" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607137598943" />
+=======
+    <state x="519" y="124" key="SettingsEditor" timestamp="1607136979639">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="519" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607136979639" />
+>>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
     <state x="93" y="93" width="1350" height="648" key="ShowDiffWithBranchDialog" timestamp="1607001602215">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -397,9 +464,14 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/test_project$http_requests.coverage" NAME="http_requests Coverage Results" MODIFIED="1607137418340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/test_project$Unittest_in_test_group_py.coverage" NAME="Unittest in test_group.py Coverage Results" MODIFIED="1607138037760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
     <SUITE FILE_PATH="coverage/test_project$Unittest_for_test_config_TestDeviceConfig_test_getRow.coverage" NAME="Unittest for test_config.TestDeviceConfig.test_getRow Coverage Results" MODIFIED="1607136632177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
     <SUITE FILE_PATH="coverage/test_project$Unittest_for_test_config_TestDeviceConfig_test_skuChange.coverage" NAME="Unittest for test_config.TestDeviceConfig.test_skuChange Coverage Results" MODIFIED="1607137967626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
     <SUITE FILE_PATH="coverage/test_project$Unittest_for_test_group_TestGroup_test_shoppingArea_store.coverage" NAME="Unittest for test_group.TestGroup.test_shoppingArea_store Coverage Results" MODIFIED="1607138102544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
+=======
+    <SUITE FILE_PATH="coverage/test_project$Unittest_in_test_group_py.coverage" NAME="Unittest in test_group.py Coverage Results" MODIFIED="1607137045923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
+    <SUITE FILE_PATH="coverage/test_project$Unittest_for_test_config_TestDeviceConfig_test_getRow.coverage" NAME="Unittest for test_config.TestDeviceConfig.test_getRow Coverage Results" MODIFIED="1607136632177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
+>>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
   </component>
 </project>

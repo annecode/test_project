@@ -6,12 +6,12 @@
 
 
 import unittest
-from test_case.test_group import TestGroup
-from test_case.test_config import TestDeviceConfig
+from test_case.test_weather1 import TestApi1
+from test_case.test_weather2 import TestApi2
 
 
 if __name__ == '__main__':
-    suite1 = unittest.TestLoader().loadTestsFromTestCase(TestGroup)
-    suite2 = unittest.TestLoader().loadTestsFromTestCase(TestDeviceConfig)
+    suite1 = unittest.TestLoader().loadTestsFromTestCase(TestApi1)
+    suite2 = unittest.TestLoader().loadTestsFromTestCase(TestApi2)
     suite = unittest.TestSuite([suite2])
-    unittest.TextTestRunner(verbosity=2).run(suite)
+    unittest.TextTestRunner(verbosity=1).run(suite)
