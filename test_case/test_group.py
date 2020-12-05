@@ -15,8 +15,8 @@ class TestGroup(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
-        cls.url_pdc = 'http://bluepdcidtest.bluepay.asia'
-        cls.url_group = 'http://groupbuyidtest.bluepay.asia'
+        cls.url_pdc = 'http://httpbin.org'
+        cls.url_group = 'http://httpbin.org'
 
     @classmethod
     def tearDownClass(cls):
@@ -31,7 +31,7 @@ class TestGroup(unittest.TestCase):
           "pageSize": "50",
           "shelfStatus": "1"
         }
-        r = requests.post(TestGroup.url_pdc + '/commodity/info/list', json=payload)
+        r = requests.post(TestGroup.url_pdc + '/anything', json=payload)
         self.assertEqual(200, r.status_code, '请求返回非200')
         self.assertIn('status', r.text, '响应不包含status')
         return r.json()
@@ -45,11 +45,11 @@ class TestGroup(unittest.TestCase):
           "subTitle": f"ANNE-{random_letter_number(4, 0)}",
           "type": "1",  # 1导购区，2新品区
           "sort": "3",
-          "picture": "https://bluemart.oss-ap-southeast-1.aliyuncs.com/upload/bluemart/20200702/1593682774284.png",
+          "picture": "http://httpbin.org/",
           "startTime": f"{time_mktime()}",
           "endTime": f"{time_mktime(1)}"
         }
-        r = requests.post(TestGroup.url_group + '/groupBuy/banz/shoppingArea/store', json=payload)
+        r = requests.post(TestGroup.url_group + '/anything', json=payload)
         self.assertEqual(200, r.status_code, '请求返回非200')
         print(payload)
         return r.json()

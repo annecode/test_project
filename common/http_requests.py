@@ -66,6 +66,6 @@ class HttpRequests(object):
 
 if __name__ == '__main__':
     data = {'name': 'anne', 'age': 20}
-    host = 'http://192.168.4.102:21801'
+    host = 'http://httpbin.org'
     r = HttpRequests(host)
     print(r.k_v(data))
