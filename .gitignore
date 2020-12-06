@@ -8,4 +8,3 @@
 /logs/latest/*.txt
 /logs/latest/*.html
 /venv/*
-/test_case/test*.py

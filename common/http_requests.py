@@ -23,7 +23,8 @@ class HttpRequests(object):
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
         }
 
-    def k_v(self, data):
+    @staticmethod
+    def k_v(data):
         """
 拼接请求参数
         :param data: 请求参数
