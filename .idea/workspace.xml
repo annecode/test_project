@@ -26,7 +26,16 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b00cb29d-a8c5-4868-8c5d-37ebe4af0ca4" name="默认的" comment="" />
+    <list default="true" id="b00cb29d-a8c5-4868-8c5d-37ebe4af0ca4" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/anne.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/anne.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/http_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/http_requests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/showapi_sdk_python/ShowapiRequest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/showapi_sdk_python/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/run_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/run_test_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/test_weather1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/test_weather1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/test_weather2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/test_weather2.py" afterDir="false" />
+    </list>
     <list id="d4f2da1b-b788-4529-96a4-a1eebad09b6e" name="'company-tag-1'" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +70,6 @@
       </set>
     </option>
   </component>
-  <component name="JupyterTrust" id="5b16a912-7c06-43ba-967e-9e412991d05b" />
   <component name="ProjectId" id="1l89TnJhe9wgCxi49qzgGLFp0mO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="新增" />
@@ -74,13 +82,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -89,11 +93,7 @@
       </console-settings>
     </option>
   </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="Python 测试.Unittest for test_group.TestGroup.test_shoppingArea_store">
-=======
-  <component name="RunManager" selected="Python.http_requests">
->>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
+  <component name="RunManager" selected="Python 测试.Unittest for test_weather2.TestApi2">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="papi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -106,7 +106,6 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -116,30 +115,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="http_requests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="test_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/http_requests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-<<<<<<< HEAD
-=======
     <configuration name="run_test_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,7 +127,6 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/run_test_class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -162,7 +136,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
->>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
     <configuration default="true" type="Tox" factoryName="Tox">
       <module name="papi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,7 +145,6 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
     <configuration name="Unittest for test_config.TestDeviceConfig.test_getRow" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -184,13 +156,12 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_config.TestDeviceConfig.test_getRow&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittest for test_config.TestDeviceConfig.test_skuChange" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittest for test_weather2.TestApi2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -199,13 +170,12 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_config.TestDeviceConfig.test_skuChange&quot;" />
+      <option name="_new_target" value="&quot;test_weather2.TestApi2&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittest for test_group.TestGroup.test_shoppingArea_store" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittest for test_weather2.TestApi2.test_joke_get" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -214,13 +184,12 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_group.TestGroup.test_shoppingArea_store&quot;" />
+      <option name="_new_target" value="&quot;test_weather2.TestApi2.test_joke_get&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittest in test_group.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittest in test_weather1.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -229,9 +198,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/test_group.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/test_weather1.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -244,7 +212,6 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -263,7 +230,6 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
@@ -271,23 +237,14 @@
     </configuration>
     <recent_temporary>
       <list>
-<<<<<<< HEAD
-        <item itemvalue="Python 测试.Unittest for test_group.TestGroup.test_shoppingArea_store" />
-        <item itemvalue="Python 测试.Unittest in test_group.py" />
-        <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_skuChange" />
-        <item itemvalue="Python.http_requests" />
-        <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_getRow" />
-=======
-        <item itemvalue="Python.http_requests" />
-        <item itemvalue="Python 测试.Unittest in test_group.py" />
-        <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_getRow" />
+        <item itemvalue="Python 测试.Unittest for test_weather2.TestApi2" />
+        <item itemvalue="Python 测试.Unittest for test_weather2.TestApi2.test_joke_get" />
         <item itemvalue="Python.run_test_class" />
-        <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_skuChange" />
->>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
+        <item itemvalue="Python 测试.Unittest in test_weather1.py" />
+        <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_getRow" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -299,12 +256,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606967861635</updated>
-      <workItem from="1607135727525" duration="1428000" />
-<<<<<<< HEAD
-      <workItem from="1607137237777" duration="872000" />
-=======
-      <workItem from="1607137237777" duration="397000" />
->>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
     </task>
     <task id="LOCAL-00001" summary="测试框架初步搭建">
       <created>1607001373452</created>
@@ -315,9 +266,6 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -363,53 +311,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试框架初步搭建" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="93" y="93" width="1350" height="648" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1607138132363">
+    <state x="395" y="96" key="#检查" timestamp="1607346087197">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="93" y="93" width="1350" height="648" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.834@0.0.1536.834" timestamp="1607138132363" />
+    <state x="395" y="96" key="#检查/0.0.1536.834@0.0.1536.834" timestamp="1607346087197" />
     <state x="406" y="0" key="CommitChangelistDialog2" timestamp="1607001371513">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="406" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1607001371513" />
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1607054729475">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1607318951501">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607054729475" />
-<<<<<<< HEAD
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1607138102569">
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607318951501" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1607346687465">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607138102569" />
-    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1607138102569">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607346687465" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1607346687465">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607138102569" />
-    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1607138102568">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607346687465" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1607346687465">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607138102568" />
-    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1607138102569">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607346687465" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1607346687465">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607138102569" />
-=======
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1607137158771">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
-    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1607137158771">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
-    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1607137158771">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
-    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1607137158771">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607137158771" />
->>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607346687465" />
     <state width="1493" height="246" key="GridCell.Tab.1.bottom" timestamp="1607078754713">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -426,17 +355,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="246" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1607078754713" />
-<<<<<<< HEAD
-    <state x="519" y="124" key="SettingsEditor" timestamp="1607137598943">
+    <state x="519" y="124" key="SettingsEditor" timestamp="1607064443402">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="519" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607137598943" />
-=======
-    <state x="519" y="124" key="SettingsEditor" timestamp="1607136979639">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="519" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607136979639" />
->>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
+    <state x="519" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607064443402" />
     <state x="93" y="93" width="1350" height="648" key="ShowDiffWithBranchDialog" timestamp="1607001602215">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -453,6 +375,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="602" y="69" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.834@0.0.1536.834" timestamp="1607002316005" />
+    <state x="210" y="45" width="476" height="378" key="dock-window-1" timestamp="1607321109655">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="210" y="45" width="476" height="378" key="dock-window-1/0.0.1536.834@0.0.1536.834" timestamp="1607321109655" />
     <state x="468" y="133" width="681" height="626" key="find.popup" timestamp="1606981692587">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -462,16 +388,15 @@
     </state>
     <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607072931917" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/test_project$http_requests.coverage" NAME="http_requests Coverage Results" MODIFIED="1607137418340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-<<<<<<< HEAD
-    <SUITE FILE_PATH="coverage/test_project$Unittest_in_test_group_py.coverage" NAME="Unittest in test_group.py Coverage Results" MODIFIED="1607138037760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
-    <SUITE FILE_PATH="coverage/test_project$Unittest_for_test_config_TestDeviceConfig_test_getRow.coverage" NAME="Unittest for test_config.TestDeviceConfig.test_getRow Coverage Results" MODIFIED="1607136632177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
-    <SUITE FILE_PATH="coverage/test_project$Unittest_for_test_config_TestDeviceConfig_test_skuChange.coverage" NAME="Unittest for test_config.TestDeviceConfig.test_skuChange Coverage Results" MODIFIED="1607137967626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
-    <SUITE FILE_PATH="coverage/test_project$Unittest_for_test_group_TestGroup_test_shoppingArea_store.coverage" NAME="Unittest for test_group.TestGroup.test_shoppingArea_store Coverage Results" MODIFIED="1607138102544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
-=======
-    <SUITE FILE_PATH="coverage/test_project$Unittest_in_test_group_py.coverage" NAME="Unittest in test_group.py Coverage Results" MODIFIED="1607137045923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
-    <SUITE FILE_PATH="coverage/test_project$Unittest_for_test_config_TestDeviceConfig_test_getRow.coverage" NAME="Unittest for test_config.TestDeviceConfig.test_getRow Coverage Results" MODIFIED="1607136632177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
->>>>>>> 30720fe7bdf8f43fdabad959d0af4c1a019645cd
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/Programs/Python/Python39/Lib/unittest/case.py</url>
+          <line>430</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

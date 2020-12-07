@@ -2,6 +2,7 @@
   <dictionary name="anne">
     <words>
       <w>asctime</w>
+      <w>classmethod</w>
       <w>levelname</w>
       <w>mktime</w>
     </words>

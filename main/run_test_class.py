@@ -14,4 +14,4 @@ if __name__ == '__main__':
     suite1 = unittest.TestLoader().loadTestsFromTestCase(TestApi1)
     suite2 = unittest.TestLoader().loadTestsFromTestCase(TestApi2)
     suite = unittest.TestSuite([suite2])
-    unittest.TextTestRunner(verbosity=1).run(suite)
+    unittest.TextTestRunner(verbosity=2).run(suite)

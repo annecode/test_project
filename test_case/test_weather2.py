@@ -8,16 +8,11 @@
 import unittest
 from common.http_requests import HttpRequests
 
+url_index = 'http://route.showapi.com/'
+http = HttpRequests(url_index)
+
 
 class TestApi2(unittest.TestCase):
-
-    @classmethod
-    def setUpClass(cls) -> None:
-        cls.url = 'http://route.showapi.com'
-
-    @classmethod
-    def tearDownClass(cls) -> None:
-        print('执行完成！')
 
     def test_joke_post(self):
         payload = {
@@ -26,9 +21,8 @@ class TestApi2(unittest.TestCase):
           "showapi_appid": "467516",
           "showapi_sign": "5cd5bb087f864a08b16a3ecb27cf4172"
         }
-        url = '/341-1'
-        obj = HttpRequests(TestApi2.url)
-        res = obj.post(url, payload, body='form')
+        url = '341-1'
+        res = http.post(url, payload, body='form')
         self.assertEqual(200, res[0], '请求返回非200')
         self.assertIn('showapi_res_code', res[1], '响应不包含showapi_res_code')
 
@@ -39,8 +33,7 @@ class TestApi2(unittest.TestCase):
             "showapi_appid": "467516",
             "showapi_sign": "5cd5bb087f864a08b16a3ecb27cf4172"
         }
-        url = '/341-1'
-        obj = HttpRequests(TestApi2.url)
-        res = obj.get(url, payload)
+        url = '341-1'
+        res = http.get(url, payload)
         self.assertEqual(200, res[0], '请求返回非200')
         self.assertIn('showapi_res_code', res[1], '响应不包含showapi_res_code')
