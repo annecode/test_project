@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -26,17 +29,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b00cb29d-a8c5-4868-8c5d-37ebe4af0ca4" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/anne.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/anne.xml" afterDir="false" />
+    <list default="true" id="3e02b15b-133f-4895-9dae-012d2a74ca18" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/http_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/http_requests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/showapi_sdk_python/ShowapiRequest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/showapi_sdk_python/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/run_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/run_test_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/test_weather1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/test_weather1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_case/test_weather2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/test_weather2.py" afterDir="false" />
     </list>
-    <list id="d4f2da1b-b788-4529-96a4-a1eebad09b6e" name="'company-tag-1'" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +67,7 @@
       </set>
     </option>
   </component>
+  <component name="JupyterTrust" id="5b16a912-7c06-43ba-967e-9e412991d05b" />
   <component name="ProjectId" id="1l89TnJhe9wgCxi49qzgGLFp0mO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="新增" />
@@ -106,6 +104,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -127,6 +126,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/run_test_class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -145,6 +145,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
     <configuration name="Unittest for test_config.TestDeviceConfig.test_getRow" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -156,6 +157,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_config.TestDeviceConfig.test_getRow&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
@@ -170,6 +172,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_weather2.TestApi2&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
@@ -184,6 +187,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_weather2.TestApi2.test_joke_get&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
@@ -198,6 +202,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/test_weather1.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
@@ -212,6 +217,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -230,6 +236,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
@@ -245,6 +252,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -266,6 +274,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -311,10 +322,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试框架初步搭建" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="395" y="96" key="#检查" timestamp="1607346087197">
+    <state x="395" y="96" key="#检查" timestamp="1607439115473">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="395" y="96" key="#检查/0.0.1536.834@0.0.1536.834" timestamp="1607346087197" />
+    <state x="395" y="96" key="#检查/0.0.1536.834@0.0.1536.834" timestamp="1607439115473" />
     <state x="406" y="0" key="CommitChangelistDialog2" timestamp="1607001371513">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -398,5 +409,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/test_project$run_test_class.coverage" NAME="run_test_class Coverage Results" MODIFIED="1607242934120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/test_project$Unittest_in_test_weather1_py.coverage" NAME="Unittest in test_weather1.py Coverage Results" MODIFIED="1607242810364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
   </component>
 </project>

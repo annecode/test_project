@@ -31,7 +31,7 @@ class HttpRequests(object):
         else:
             print('data必须是字典')
 
-    def get(self, url, data, headers=None, cookies=None):
+    def get(self, url, data, headers=None, cookies=None, body=None):
         uri = self.host + url
         response = requests.get(uri, params=data, headers=headers, cookies=cookies, verify=False)
         res_time = response.elapsed.total_seconds()
