@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -27,14 +30,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b00cb29d-a8c5-4868-8c5d-37ebe4af0ca4" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/test_case/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_case/test_qrcode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/anne.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/anne.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/http_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/http_requests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/showapi_sdk_python/ShowapiRequest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/showapi_sdk_python/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/public_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/public_method.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/run_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/run_test_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/test_weather1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/test_weather1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/test_weather2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/test_weather2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/test_weather1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/test_joke1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/test_weather2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/test_joke2.py" afterDir="false" />
     </list>
     <list id="d4f2da1b-b788-4529-96a4-a1eebad09b6e" name="'company-tag-1'" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +97,7 @@
       </console-settings>
     </option>
   </component>
-  <component name="RunManager" selected="Python 测试.Unittest for test_weather2.TestApi2">
+  <component name="RunManager" selected="Python 测试.Unittest in test_qrcode.py">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="papi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,6 +111,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="http_requests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/http_requests.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -136,6 +161,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_case/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
       <module name="papi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,7 +193,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittest for test_config.TestDeviceConfig.test_getRow" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittest for test_qrcode.TestQRCode.test_03_get_imgUrl" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -157,11 +203,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_config.TestDeviceConfig.test_getRow&quot;" />
+      <option name="_new_target" value="&quot;test_qrcode.TestQRCode.test_03_get_imgUrl&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittest for test_weather2.TestApi2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittest in test_qrcode.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -171,35 +217,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_weather2.TestApi2&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittest for test_weather2.TestApi2.test_joke_get" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="test_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_weather2.TestApi2.test_joke_get&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittest in test_weather1.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="test_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/test_weather1.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/test_qrcode.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -237,11 +255,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python 测试.Unittest for test_weather2.TestApi2" />
-        <item itemvalue="Python 测试.Unittest for test_weather2.TestApi2.test_joke_get" />
+        <item itemvalue="Python 测试.Unittest in test_qrcode.py" />
         <item itemvalue="Python.run_test_class" />
-        <item itemvalue="Python 测试.Unittest in test_weather1.py" />
-        <item itemvalue="Python 测试.Unittest for test_config.TestDeviceConfig.test_getRow" />
+        <item itemvalue="Python 测试.Unittest for test_qrcode.TestQRCode.test_03_get_imgUrl" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.http_requests" />
       </list>
     </recent_temporary>
   </component>
@@ -311,10 +329,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试框架初步搭建" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="395" y="96" key="#检查" timestamp="1607346087197">
+    <state x="395" y="96" key="#检查" timestamp="1607572470417">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="395" y="96" key="#检查/0.0.1536.834@0.0.1536.834" timestamp="1607346087197" />
+    <state x="395" y="96" key="#检查/0.0.1536.834@0.0.1536.834" timestamp="1607572470417" />
     <state x="406" y="0" key="CommitChangelistDialog2" timestamp="1607001371513">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -323,38 +341,38 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607318951501" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1607346687465">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1607584045616">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607346687465" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1607346687465">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607584045616" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1607584045616">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607346687465" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1607346687465">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607584045616" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1607584045616">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607346687465" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1607346687465">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607584045616" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1607584045616">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607346687465" />
-    <state width="1493" height="246" key="GridCell.Tab.1.bottom" timestamp="1607078754713">
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607584045616" />
+    <state width="1493" height="246" key="GridCell.Tab.1.bottom" timestamp="1607582482968">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607078754713" />
-    <state width="1493" height="246" key="GridCell.Tab.1.center" timestamp="1607078754713">
+    <state width="1493" height="246" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607582482968" />
+    <state width="1493" height="246" key="GridCell.Tab.1.center" timestamp="1607582482968">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1607078754713" />
-    <state width="1493" height="246" key="GridCell.Tab.1.left" timestamp="1607078754713">
+    <state width="1493" height="246" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1607582482968" />
+    <state width="1493" height="246" key="GridCell.Tab.1.left" timestamp="1607582482968">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1607078754713" />
-    <state width="1493" height="246" key="GridCell.Tab.1.right" timestamp="1607078754713">
+    <state width="1493" height="246" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1607582482968" />
+    <state width="1493" height="246" key="GridCell.Tab.1.right" timestamp="1607582482968">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1607078754713" />
+    <state width="1493" height="246" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1607582482968" />
     <state x="519" y="124" key="SettingsEditor" timestamp="1607064443402">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -375,6 +393,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="602" y="69" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.834@0.0.1536.834" timestamp="1607002316005" />
+    <state x="590" y="327" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607573543016">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="590" y="327" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1607573543016" />
     <state x="210" y="45" width="476" height="378" key="dock-window-1" timestamp="1607321109655">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -383,10 +405,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="468" y="133" width="681" height="626" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1606981692587" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1607072931917">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1607568708134">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607072931917" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607568708134" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

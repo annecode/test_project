@@ -25,6 +25,10 @@ def log_print(func):
     return wrapper
 
 
+def json_get(data):
+    pass
+
+
 def random_letter_number(length=10, combination_type=0):
     """
     默认生成10位的混合数字密码
