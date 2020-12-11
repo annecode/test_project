@@ -8,8 +8,6 @@ import json
 import unittest
 from common.http_requests import HttpRequests
 
-file = {}
-
 
 class TestQRCode(unittest.TestCase):
 
@@ -31,10 +29,8 @@ class TestQRCode(unittest.TestCase):
             "showapi_appid": TestQRCode.showapi_appid,
             "showapi_sign": TestQRCode.showapi_sign
         }
-        # print(payload)
         res = TestQRCode.http.post(url, payload)
         globals()["imgUrl"] = json.loads(res[1])["showapi_res_body"]["imgUrl"]
-        # print(globals()["imgUrl"])
         self.assertEqual(0, json.loads(res[1])["showapi_res_code"], "showapi_res_code状态码非0")
         self.assertIn("imgUrl", res[1], "响应中不包含imgUrl字段")
 
@@ -47,25 +43,21 @@ class TestQRCode(unittest.TestCase):
             "showapi_appid": TestQRCode.showapi_appid,
             "showapi_sign": TestQRCode.showapi_sign
         }
-        # print(payload)
         res = TestQRCode.http.post(url, payload)
-        # print(json.loads(res[1])["showapi_res_body"]["retText"])
         self.assertEqual(0, json.loads(res[1])["showapi_res_code"], "showapi_res_code状态码非0")
         self.assertIn("retText", res[1], "响应中不包含retText字段")
 
     def test_03_get_imgUrl(self):
         """识别二维码文件接口测试"""
         url = '887-2'
-        file_path = r'e:\test\anne_qrcode.png'
-        file["pic"] = open("%s" % file_path, 'rb')
-        print(file)
+        file_path = 'E:\\test\\anne_qrcode.png'
+        file = {"img": open("%s" % file_path, 'rb')}
         payload = {
             "img": file,
             "showapi_appid": TestQRCode.showapi_appid,
             "showapi_sign": TestQRCode.showapi_sign
         }
         res = TestQRCode.http.post(url, payload, file)
-        print(payload)
         self.assertEqual(0, json.loads(res[1])["showapi_res_code"], "showapi_res_code状态码非0")
         self.assertIn("retText", res[1], "响应中不包含retText字段")
 
@@ -73,4 +65,4 @@ class TestQRCode(unittest.TestCase):
 if __name__ == '__main__':
     suite1 = unittest.TestLoader().loadTestsFromTestCase(TestQRCode)
     suite = unittest.TestSuite([suite1])
-    unittest.TextTestRunner(verbosity=1).run(suite)
+    unittest.TextTestRunner(verbosity=2).run(suite)
