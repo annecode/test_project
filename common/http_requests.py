@@ -60,11 +60,11 @@ class HttpRequests(object):
 
 if __name__ == '__main__':
     url = 'http://route.showapi.com/'
+    file = {"img": open("E:\\test\\anne_qrcode.png", 'rb')}
     payload = {
-        "page": "1",
-        "maxResult": "2",
+        "img": file,
         "showapi_appid": "467516",
         "showapi_sign": "5cd5bb087f864a08b16a3ecb27cf4172"
     }
     api = HttpRequests(url)
-    api.api_request("Post", "341-1", payload)
+    api.api_request(method="Get", url="887-2", data=payload, files=file)

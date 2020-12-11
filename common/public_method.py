@@ -21,12 +21,8 @@ def log_print(func):
         result = func(*params)
         logging.info(f'{func.__name__}响应结果：\n{result}')
         after = time.time()
-        logging.info(f'{func.__name__}接口耗时%.3f' % (after-before))
+        logging.info(f'{func.__name__}接口耗时%.3f' % (after - before))
     return wrapper
-
-
-def json_get(data):
-    pass
 
 
 def random_letter_number(length=10, combination_type=0):
@@ -75,8 +71,46 @@ def time_mktime(flag=None):
     current_time = datetime.datetime.now()
     start_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
     end_time = (current_time + datetime.timedelta(days=1)).strftime("%Y-%m-%d %H:%M:%S")
-    # print(start_time, end_time)
     if flag:
         return end_time
     else:
         return start_time
+
+
+def get_value_from_json(in_json, target_key, results=None):
+    if results is None:
+        results = []
+    if isinstance(in_json, dict):
+        for key in in_json.keys():
+            data = in_json[key]
+            get_value_from_json(data, target_key, results=results)
+            if key == target_key:
+                results.append(data)
+    elif isinstance(in_json, (list, tuple)):
+        for data in in_json:
+            get_value_from_json(data, target_key, results=results)
+    return results
+
+
+def get_key(in_json, target_list):
+    result = {}
+    for key in target_list:
+        data = get_value_from_json(in_json, key)
+        result[key] = data
+    return result
+
+
+if __name__ == '__main__':
+
+    data = {"info": "2班成绩单",
+            "grades": {"小明": [{"chinese": 60}, {"math": 80}, {"english": 100}],
+                       "小红": [{"chinese": 90}, {"math": 70}, {"english": 50}],
+                       "小蓝": [{"chinese": 80}, {"math": 80}, {"english": 80}],
+                       },
+            "newGrades": {"info": "新增数据",
+                          "newChinese": 77
+                          }
+            }
+    fields = ["chinese", "english"]
+    res = get_key(data, fields)
+    print(res)
