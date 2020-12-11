@@ -31,7 +31,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9980df1a-9d0e-400a-ae3f-9b5392e03191" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/common/public_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/public_method.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/common/http_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/http_requests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/public_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/public_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/run_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/run_test_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/ddt_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/ddt_sample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/parameterized_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/parameterized_sample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/test_qrcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/test_qrcode.py" afterDir="false" />
+>>>>>>> 85521a3725c06fb4eb06dc1771ba1de80b40100f
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

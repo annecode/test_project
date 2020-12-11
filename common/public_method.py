@@ -78,6 +78,7 @@ def time_mktime(flag=None):
 
 
 def get_value_from_json(in_json, target_key, results=None):
+<<<<<<< HEAD
     """
     从嵌套字典中获取目标key的值
     :param in_json: 字典
@@ -85,6 +86,8 @@ def get_value_from_json(in_json, target_key, results=None):
     :param results: 目标key的值
     :return: 目标key的所有值
     """
+=======
+>>>>>>> 85521a3725c06fb4eb06dc1771ba1de80b40100f
     if results is None:
         results = []
     if isinstance(in_json, dict):
@@ -100,12 +103,15 @@ def get_value_from_json(in_json, target_key, results=None):
 
 
 def get_key(in_json, target_list):
+<<<<<<< HEAD
     """
     批量查找目标key对应的值
     :param in_json: 字典
     :param target_list: 目标key列表
     :return: 目标key列表对应的所有值
     """
+=======
+>>>>>>> 85521a3725c06fb4eb06dc1771ba1de80b40100f
     result = {}
     for key in target_list:
         data = get_value_from_json(in_json, key)
