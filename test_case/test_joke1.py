@@ -2,12 +2,11 @@
 # -*- coding: utf-8 -*-
 # author: anne
 # datetime: 2020-12-03 11:00
-# filename: test_project/test_group
+# filename: test_project/test_joke1
 
 
 import unittest
 import requests
-
 from common.public_method import log_print
 
 
@@ -27,7 +26,7 @@ class TestApi1(unittest.TestCase):
           "page": "1",
           "maxResult": "2",
           "showapi_appid": "467516",
-          "showapi_sign": "4a08f79a29c94a5a9ae8e6442b9f50d5"
+          "showapi_sign": "5cd5bb087f864a08b16a3ecb27cf4172"
         }
         r = requests.post(TestApi1.url + '/341-1', data=payload)
         self.assertEqual(200, r.status_code, '请求返回非200')

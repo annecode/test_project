@@ -18,7 +18,7 @@ class HttpRequests(object):
         self.host = host
         self.req = requests.Session()
         self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+            "Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
         }
 
     @staticmethod
@@ -37,18 +37,34 @@ class HttpRequests(object):
         res_time = response.elapsed.total_seconds()
         result = f'{response.url}接口响应是:\n{response.text}，接口耗时===>>> {res_time}'
         logging.info(result)
-        return response.status_code, response.text,response.url
+        return response.status_code, response.text, response.url
 
     # 封装post请求
-    def post(self, url, data, headers=None, cookies=None, body=None):
-        global response
+    def post(self, url, data, files=None, headers=None, cookies=None):
         uri = self.host + url
-        if body == 'form':
-            response = requests.post(uri, data=data, headers=headers, cookies=cookies, verify=False)
-        elif body == 'json':
-            response = requests.post(uri, json=data, headers=headers, cookies=cookies, verrify=False)
+        response = requests.post(uri, data=data, files=files, headers=headers, cookies=cookies, verify=False)
+        # response = requests.post(uri, json=data, headers=headers, cookies=cookies, verify=False)
         res_time = response.elapsed.total_seconds()
         api = uri + '?' + self.k_v(data)
         result = f'{api}接口响应是\n:{response.text}接口耗时===>>> {res_time}s'
         logging.info(result)
         return response.status_code, response.text, response.url
+
+    # 将各种请求方法封装
+    def api_request(self, method, url, data, files=None, headers=None, cookies=None):
+        map = {"Get": self.get, "Post": self.post}
+        api_method = map[method]
+        print(api_method)
+        return api_method(url, data, files, headers, cookies)
+
+
+if __name__ == '__main__':
+    url = 'http://route.showapi.com/'
+    file = {"img": open("E:\\test\\anne_qrcode.png", 'rb')}
+    payload = {
+        "img": file,
+        "showapi_appid": "467516",
+        "showapi_sign": "5cd5bb087f864a08b16a3ecb27cf4172"
+    }
+    api = HttpRequests(url)
+    api.api_request(method="Get", url="887-2", data=payload, files=file)
