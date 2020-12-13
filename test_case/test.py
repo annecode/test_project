@@ -15,7 +15,6 @@ class TestFile:
 
 
 if __name__ == '__main__':
-
     f = TestFile()
     r = f.addFilePara("pic", "e:\\test\\anne_qrcode.png")
     print(r)  # 返回对象地址

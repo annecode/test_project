@@ -114,7 +114,6 @@ def get_key(in_json, target_list):
 
 
 if __name__ == '__main__':
-
     data = {"info": "2班成绩单",
             "grades": {"小明": [{"chinese": 60}, {"math": 80}, {"english": 100}],
                        "小红": [{"chinese": 90}, {"math": 70}, {"english": 50}],

@@ -18,7 +18,7 @@ class TestQRCode(unittest.TestCase):
         cls.showapi_appid = "467516"
         cls.showapi_sign = "5cd5bb087f864a08b16a3ecb27cf4172"
 
-    @unittest.skip("不执行")
+    # @unittest.skip("不执行")
     def test_01_generate(self):
         """生成二维码接口测试"""
         url = '887-1'
@@ -34,7 +34,7 @@ class TestQRCode(unittest.TestCase):
         self.assertEqual(0, json.loads(res[1])["showapi_res_code"], "showapi_res_code状态码非0")
         self.assertIn("imgUrl", res[1], "响应中不包含imgUrl字段")
 
-    @unittest.skip("不执行")
+    # @unittest.skip("不执行")
     def test_02_get_imgUrl(self):
         """识别二维码图片地址接口测试"""
         url = '887-3'

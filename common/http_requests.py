@@ -31,7 +31,7 @@ class HttpRequests(object):
         else:
             print('data必须是字典')
 
-    def get(self, url, data, headers=None, cookies=None, body=None):
+    def get(self, url, data, headers=None, cookies=None):
         uri = self.host + url
         response = requests.get(uri, params=data, headers=headers, cookies=cookies, verify=False)
         res_time = response.elapsed.total_seconds()
@@ -43,7 +43,7 @@ class HttpRequests(object):
     def post(self, url, data, files=None, headers=None, cookies=None):
         uri = self.host + url
         response = requests.post(uri, data=data, files=files, headers=headers, cookies=cookies, verify=False)
-        # response = requests.post(uri, json=data, headers=headers, cookies=cookies, verify=False)
+        # response = requests.post(uri, json=data, files=files, headers=headers, cookies=cookies, verify=False)
         res_time = response.elapsed.total_seconds()
         api = uri + '?' + self.k_v(data)
         result = f'{api}接口响应是\n:{response.text}接口耗时===>>> {res_time}s'
