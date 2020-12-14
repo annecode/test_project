@@ -1,17 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b40c2349-a410-4055-9de9-b26494025bf4" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/ddt_sample1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/ddt_sample_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_data/data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/parse_excel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/ddt_excel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/test_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/http_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/http_requests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/ddt_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/ddt_sample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/run_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/run_test_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/baidu_home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/baidu_home_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/ddt_sample1.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/ddt_sample1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/ddt_sample_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/ddt_sample_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/parameterized_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/parameterized_sample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_data/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_data/data.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,21 +82,22 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\PycharmProject\test_project\common" />
+      <recent name="D:\workspace\PycharmProject\test_project\test_data" />
+      <recent name="D:\workspace\PycharmProject\test_project\demo" />
+      <recent name="D:\PycharmProjects\test_project\test_data" />
+      <recent name="D:\PycharmProjects\test_project\demo" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\PycharmProject\test_project\.idea" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\PycharmProjects\test_project\test_data" />
-      <recent name="D:\PycharmProjects\test_project\demo" />
-      <recent name="D:\workspace\PycharmProject\test_project\config" />
-      <recent name="D:\workspace\PycharmProject\test_project\demo" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python 测试.Unittest in ddt_sample_file.py">
-    <configuration name="ddt_sample_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.ddt_excel">
+    <configuration name="ddt_excel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -84,7 +109,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo/ddt_sample_file.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo/ddt_excel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -93,7 +119,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="http_requests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="parse_excel (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,7 +131,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/http_requests.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/parse_excel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -114,7 +141,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_test_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="parse_excel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -122,11 +149,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/run_test_class.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\workspace\PycharmProject\test_project\common\parse_excel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -144,6 +172,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/demo/ddt_sample_file.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
@@ -158,6 +187,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/demo/ddt_sample.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
@@ -165,15 +195,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ddt_excel" />
+        <item itemvalue="Python.parse_excel (1)" />
         <item itemvalue="Python 测试.Unittest in ddt_sample_file.py" />
-        <item itemvalue="Python.http_requests" />
-        <item itemvalue="Python.run_test_class" />
-        <item itemvalue="Python.ddt_sample_file" />
+        <item itemvalue="Python.parse_excel" />
         <item itemvalue="Python 测试.Unittest in ddt_sample.py" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -195,50 +225,88 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1607938414083">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607938414083" />
-    <state width="1493" height="372" key="GridCell.Tab.0.bottom" timestamp="1607946600010">
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1607959684461">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607946600010" />
-    <state width="1493" height="372" key="GridCell.Tab.0.center" timestamp="1607946600009">
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607959684461" />
+    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1607959684461">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607946600009" />
-    <state width="1493" height="372" key="GridCell.Tab.0.left" timestamp="1607946600009">
+    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607959684461" />
+    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1607959684461">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607946600009" />
-    <state width="1493" height="372" key="GridCell.Tab.0.right" timestamp="1607946600009">
+    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607959684461" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1607959684461">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607946600009" />
-    <state width="1493" height="246" key="GridCell.Tab.1.bottom" timestamp="1607939683621">
+    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607959684461" />
+    <state width="1493" height="294" key="GridCell.Tab.1.bottom" timestamp="1607956853539">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607939683621" />
-    <state width="1493" height="246" key="GridCell.Tab.1.center" timestamp="1607939683621">
+    <state width="1493" height="294" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607956853539" />
+    <state width="1493" height="294" key="GridCell.Tab.1.center" timestamp="1607956853539">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1607939683621" />
-    <state width="1493" height="246" key="GridCell.Tab.1.left" timestamp="1607939683621">
+    <state width="1493" height="294" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1607956853539" />
+    <state width="1493" height="294" key="GridCell.Tab.1.left" timestamp="1607956853539">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1607939683621" />
-    <state width="1493" height="246" key="GridCell.Tab.1.right" timestamp="1607939683621">
+    <state width="1493" height="294" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1607956853539" />
+    <state width="1493" height="294" key="GridCell.Tab.1.right" timestamp="1607956853539">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1607939683621" />
-    <state x="250" y="86" key="SettingsEditor" timestamp="1607932755273">
+    <state width="1493" height="294" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1607956853539" />
+    <state x="250" y="86" key="SettingsEditor" timestamp="1607952055813">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="250" y="86" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607932755273" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1607835384809">
+    <state x="250" y="86" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607952055813" />
+    <state width="775" height="424" key="XDebugger.FullValuePopup" timestamp="1607955647014">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607835384809" />
+    <state width="775" height="424" key="XDebugger.FullValuePopup/0.0.1536.834@0.0.1536.834" timestamp="1607955647014" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1607957377393">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607957377393" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/test_project$ddt_excel.coverage" NAME="ddt_excel Coverage Results" MODIFIED="1607959679912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demo" />
+    <SUITE FILE_PATH="coverage/test_project$run_test_class.coverage" NAME="run_test_class Coverage Results" MODIFIED="1607835275132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/test_project$parse_excel__1_.coverage" NAME="parse_excel (1) Coverage Results" MODIFIED="1607959664053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/test_project$parse_excel.coverage" NAME="parse_excel Coverage Results" MODIFIED="1607958762456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test_project$Unittest_in_ddt_sample_file_py.coverage" NAME="Unittest in ddt_sample_file.py Coverage Results" MODIFIED="1607959090312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demo" />
+    <SUITE FILE_PATH="coverage/test_project$Unittest_in_parameterized_sample_py.coverage" NAME="Unittest in parameterized_sample.py Coverage Results" MODIFIED="1607952709594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demo" />
+    <SUITE FILE_PATH="coverage/test_project$Unittest_in_ddt_sample1_py.coverage" NAME="Unittest in ddt_sample1.py Coverage Results" MODIFIED="1607952781972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demo" />
+    <SUITE FILE_PATH="coverage/test_project$Unittest_in_ddt_sample_py.coverage" NAME="Unittest in ddt_sample.py Coverage Results" MODIFIED="1607957960810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demo" />
   </component>
 </project>

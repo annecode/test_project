@@ -10,7 +10,7 @@ from parameterized import parameterized
 
 
 class MyTest(unittest.TestCase):
-    @parameterized.expand([(3, 1), (1, 0), (2, 3)])
+    @parameterized.expand([(3, 1), (1, 0), (4, 3)])
     def test_values(self, first, second):
         print(first, second)
         self.assertTrue(first > second)

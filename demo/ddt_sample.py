@@ -13,8 +13,8 @@ class MyTest(unittest.TestCase):
     @data((1, 1), (2, 4))
     @unpack
     def test_values(self, first, second):
-        print(first, second)
-        self.assertTrue(first < second)
+        # print(first, second)
+        self.assertTrue(first <= second)
 
     @data((1, 1), (2, 4))
     @unpack

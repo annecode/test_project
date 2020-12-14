@@ -8,11 +8,13 @@ import unittest
 from ddt import ddt, file_data, unpack
 from functools import reduce
 
+file = '../test_data/data.txt'
+
 
 @ddt
 class TestFactorial(unittest.TestCase):
 
-    @file_data('../test_data/data.txt')
+    @file_data(file)
     @unpack
     def test_factorial(self, value):
         data, exceptdata = value.split('-')
@@ -22,4 +24,4 @@ class TestFactorial(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(verbosity=2)

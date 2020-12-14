@@ -17,7 +17,7 @@ class TestAdd(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
-    @ddt.data([1, 2, 3, 6], [2, 3, 4, 6])
+    @ddt.data([1, 2, 3, 6], [2, 3, 4, 9])
     @ddt.unpack
     def test_add(self, data1, data2, data3, exceptdata):
         sum = data1 + data2 + data3
