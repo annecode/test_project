@@ -15,4 +15,4 @@ if __name__ == '__main__':
     suite2 = unittest.TestLoader().loadTestsFromTestCase(TestApi2)
     suite3 = unittest.TestLoader().loadTestsFromTestCase(TestQRCode)
     suite = unittest.TestSuite([suite3])
-    unittest.TextTestRunner(verbosity=2).run(suite)
+    unittest.TextTestRunner(verbosity=1).run(suite)

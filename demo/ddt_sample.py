@@ -10,12 +10,18 @@ from ddt import ddt, data, unpack
 
 @ddt
 class MyTest(unittest.TestCase):
-    @data((3, 1), (3, 2), (7, 5), (6, 9))
+    @data((1, 1), (2, 4))
     @unpack
     def test_values(self, first, second):
         print(first, second)
-        self.assertTrue(first > second)
+        self.assertTrue(first < second)
+
+    @data((1, 1), (2, 4))
+    @unpack
+    def test_factorial(self, data, exceptdata):
+        res = data**2
+        self.assertEqual(res, exceptdata)
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main(verbosity=1)

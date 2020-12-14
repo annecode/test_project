@@ -41,22 +41,23 @@ class HttpRequests(object):
         return response.status_code, response.text, response.url
 
     # 封装post请求
-    def post(self, url, data, files=None, headers=None, cookies=None):
+    def post(self, url, data, body=None, files=None, headers=None, cookies=None):
         uri = self.host + url
-        response = requests.post(uri, data=data, files=files, headers=headers, cookies=cookies, verify=False)
-        # response = requests.post(uri, json=data, files=files, headers=headers, cookies=cookies, verify=False)
+        if body == 'json':
+            response = requests.post(uri, json=data, files=files, headers=headers, cookies=cookies, verify=False)
+        else:
+            response = requests.post(uri, data=data, files=files, headers=headers, cookies=cookies, verify=False)
         res_time = response.elapsed.total_seconds()
         api = uri + '?' + self.k_v(data)
-        result = f'{api}接口响应是\n:{response.text}接口耗时===>>> {res_time}s'
+        result = f'{api}接口响应是\n:{response.text}接口耗时===>>> {res_time}'
         logging.info(result)
         return response.status_code, response.text, response.url
 
     # 将各种请求方法封装
-    def api_request(self, method, url, data, files=None, headers=None, cookies=None):
+    def api_request(self, method, url, data, body=None, files=None, headers=None, cookies=None):
         map = {"Get": self.get, "Post": self.post}
         api_method = map[method]
-        print(api_method)
-        return api_method(url, data, files, headers, cookies)
+        return api_method(url, data, body, files, headers, cookies)
 
 
 if __name__ == '__main__':
@@ -68,4 +69,4 @@ if __name__ == '__main__':
         "showapi_sign": "5cd5bb087f864a08b16a3ecb27cf4172"
     }
     api = HttpRequests(url)
-    api.api_request(method="Get", url="887-2", data=payload, files=file)
+    api.api_request(method="Post", url="887-2", data=payload, files=file)

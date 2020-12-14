@@ -4,3 +4,5 @@
 # datetime: 2020-12-13 10:58
 # filename: test_project/baidu_home_page
 
+
+from page_objects import page_element, PageObject

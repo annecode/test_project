@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b40c2349-a410-4055-9de9-b26494025bf4" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/anne.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/anne_home.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/ddt_sample1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/ddt_sample_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_data/data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/test_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/http_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/http_requests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/ddt_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/ddt_sample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/parameterized_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/parameterized_sample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/run_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/run_test_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/baidu_home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/baidu_home_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,24 +51,69 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/测试材料/参考文件/Python/全栈测试开发培训-脚本/第27课时" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\PycharmProject\test_project\config" />
-      <recent name="D:\workspace\PycharmProject\test_project\demo" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\PycharmProject\test_project\.idea" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\test_project\test_data" />
+      <recent name="D:\PycharmProjects\test_project\demo" />
+      <recent name="D:\workspace\PycharmProject\test_project\config" />
+      <recent name="D:\workspace\PycharmProject\test_project\demo" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python 测试.Unittest in parameterized_sample.py">
+  <component name="RunManager" selected="Python 测试.Unittest in ddt_sample_file.py">
+    <configuration name="ddt_sample_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo/ddt_sample_file.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="http_requests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/http_requests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="run_test_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,7 +126,6 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/run_test_class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -94,29 +135,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittest in parameterized_sample.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittest in ddt_sample_file.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/demo/parameterized_sample.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/demo/ddt_sample_file.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittest in ddt_sample.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/demo/ddt_sample.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python 测试.Unittest in parameterized_sample.py" />
+        <item itemvalue="Python 测试.Unittest in ddt_sample_file.py" />
+        <item itemvalue="Python.http_requests" />
         <item itemvalue="Python.run_test_class" />
+        <item itemvalue="Python.ddt_sample_file" />
+        <item itemvalue="Python 测试.Unittest in ddt_sample.py" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b40c2349-a410-4055-9de9-b26494025bf4" name="默认的" comment="" />
@@ -136,37 +196,49 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1607834120173">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1607938414083">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607834120173" />
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1607835335915">
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607938414083" />
+    <state width="1493" height="372" key="GridCell.Tab.0.bottom" timestamp="1607946600010">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607835335915" />
-    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1607835335915">
+    <state width="1493" height="372" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607946600010" />
+    <state width="1493" height="372" key="GridCell.Tab.0.center" timestamp="1607946600009">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607835335915" />
-    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1607835335915">
+    <state width="1493" height="372" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607946600009" />
+    <state width="1493" height="372" key="GridCell.Tab.0.left" timestamp="1607946600009">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607835335915" />
-    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1607835335915">
+    <state width="1493" height="372" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607946600009" />
+    <state width="1493" height="372" key="GridCell.Tab.0.right" timestamp="1607946600009">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607835335915" />
-    <state x="270" y="62" key="SettingsEditor" timestamp="1607835491457">
+    <state width="1493" height="372" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607946600009" />
+    <state width="1493" height="246" key="GridCell.Tab.1.bottom" timestamp="1607939683621">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="270" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607835491457" />
+    <state width="1493" height="246" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607939683621" />
+    <state width="1493" height="246" key="GridCell.Tab.1.center" timestamp="1607939683621">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="246" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1607939683621" />
+    <state width="1493" height="246" key="GridCell.Tab.1.left" timestamp="1607939683621">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="246" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1607939683621" />
+    <state width="1493" height="246" key="GridCell.Tab.1.right" timestamp="1607939683621">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="246" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1607939683621" />
+    <state x="250" y="86" key="SettingsEditor" timestamp="1607932755273">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="250" y="86" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607932755273" />
     <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1607835384809">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607835384809" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/test_project$run_test_class.coverage" NAME="run_test_class Coverage Results" MODIFIED="1607835275132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
-    <SUITE FILE_PATH="coverage/test_project$Unittest_in_parameterized_sample_py.coverage" NAME="Unittest in parameterized_sample.py Coverage Results" MODIFIED="1607835332022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
