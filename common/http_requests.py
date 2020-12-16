@@ -36,7 +36,8 @@ class HttpRequests(object):
         uri = self.host + url
         response = requests.get(uri, params=data, headers=headers, cookies=cookies, verify=False)
         res_time = response.elapsed.total_seconds()
-        result = f'{response.url}接口响应是:\n{response.text}，接口耗时===>>> {res_time}'
+        # result = f'{response.url}接口响应是:\n{response.text}，接口耗时===>>> {res_time}'
+        result = f'{response.url}接口耗时===>>> {res_time}'
         logging.info(result)
         # print(res.encoding)    # 这个是用来查看网页编码的
         # res.encoding = 'utf-8'   # 跟上一个结合来用，如果编码有乱码，则可以通过这个定义编码来改变

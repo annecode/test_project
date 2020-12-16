@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # author: anne
 # datetime: 2020-12-16 10:04
-# filename: test_project/ddt_douban_data
+# filename: test_project/test_ddt_douban
 
 import requests
 import unittest
@@ -43,8 +43,4 @@ class TestDoubanApi(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    suite1 = unittest.TestLoader().loadTestsFromTestCase(TestDoubanApi)
-    suite = unittest.TestSuite(suite1)
-    unittest.TextTestRunner(verbosity=2).run(suite)
-
-
+    unittest.main()

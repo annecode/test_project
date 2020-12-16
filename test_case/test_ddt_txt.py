@@ -5,7 +5,7 @@
 # filename: test_project/ddt_sample_file
 
 import unittest
-from ddt import ddt, file_data, unpack
+from ddt import ddt, file_data
 from functools import reduce
 
 file = '../test_data/data.txt'
@@ -15,7 +15,6 @@ file = '../test_data/data.txt'
 class TestFactorial(unittest.TestCase):
 
     @file_data(file)
-    # @unpack
     def test_factorial(self, value):
         data, exceptdata = value.split('-')
         print(data, exceptdata)

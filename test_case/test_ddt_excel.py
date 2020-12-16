@@ -22,7 +22,7 @@ class TestExcelOutput(unittest.TestCase):
         """测试excel数据里是否有anne"""
         name, age = data
         print(name, age, data)
-        self.assertIn('anne', name)
+        self.assertTrue(name, age)
 
 
 if __name__ == '__main__':
