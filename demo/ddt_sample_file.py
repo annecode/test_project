@@ -15,7 +15,7 @@ file = '../test_data/data.txt'
 class TestFactorial(unittest.TestCase):
 
     @file_data(file)
-    @unpack
+    # @unpack
     def test_factorial(self, value):
         data, exceptdata = value.split('-')
         print(data, exceptdata)

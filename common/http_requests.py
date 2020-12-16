@@ -19,7 +19,7 @@ class HttpRequests(object):
         self.host = host
         self.req = requests.Session()
         self.headers = {
-            "Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
         }
 
     @staticmethod
@@ -32,16 +32,18 @@ class HttpRequests(object):
         else:
             print('data必须是字典')
 
-    def get(self, url, data, headers=None, cookies=None):
+    def get(self, url, data=None, headers=None, cookies=None):
         uri = self.host + url
         response = requests.get(uri, params=data, headers=headers, cookies=cookies, verify=False)
         res_time = response.elapsed.total_seconds()
         result = f'{response.url}接口响应是:\n{response.text}，接口耗时===>>> {res_time}'
         logging.info(result)
+        # print(res.encoding)    # 这个是用来查看网页编码的
+        # res.encoding = 'utf-8'   # 跟上一个结合来用，如果编码有乱码，则可以通过这个定义编码来改变
         return response.status_code, response.text, response.url
 
     # 封装post请求
-    def post(self, url, data, body=None, files=None, headers=None, cookies=None):
+    def post(self, url, data=None, body=None, files=None, headers=None, cookies=None):
         uri = self.host + url
         if body == 'json':
             response = requests.post(uri, json=data, files=files, headers=headers, cookies=cookies, verify=False)
@@ -54,7 +56,7 @@ class HttpRequests(object):
         return response.status_code, response.text, response.url
 
     # 将各种请求方法封装
-    def api_request(self, method, url, data, body=None, files=None, headers=None, cookies=None):
+    def api_request(self, method, url, data=None, body=None, files=None, headers=None, cookies=None):
         map = {"Get": self.get, "Post": self.post}
         api_method = map[method]
         return api_method(url, data, body, files, headers, cookies)

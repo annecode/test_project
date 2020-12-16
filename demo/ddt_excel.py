@@ -6,7 +6,7 @@
 
 
 import unittest
-from ddt import ddt, data, unpack
+from ddt import ddt, data
 from common.parse_excel import ParseExcel
 
 excelPath = r'../test_data/data_excel.xlsx'
