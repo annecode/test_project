@@ -20,9 +20,6 @@ class TestAdd(unittest.TestCase):
     @ddt.data([1, 2, 3, 6], [2, 3, 4, 9])
     @ddt.unpack
     def test_add(self, data1, data2, data3, exceptdata):
+        """测试3个数的加法"""
         sum = data1 + data2 + data3
         self.assertEqual(sum, exceptdata)
-
-
-if __name__ == '__main__':
-    unittest.main()

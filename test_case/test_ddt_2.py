@@ -13,11 +13,13 @@ class MyTest(unittest.TestCase):
     @data((1, 1), (2, 4))
     @unpack
     def test_values(self, first, second):
+        """测试两个数的大小"""
         self.assertTrue(first <= second)
 
     @data((1, 1), (2, 4))
     @unpack
     def test_factorial(self, data, exceptdata):
+        """测试阶乘"""
         res = data**2
         print(res)
         self.assertEqual(res, exceptdata)
@@ -25,6 +27,7 @@ class MyTest(unittest.TestCase):
     @data(['anne'], ['hello'])
     @unpack
     def test_str(self, str1):
+        """测试字符串传参"""
         print(str1)
         self.assertTrue(str1)
 

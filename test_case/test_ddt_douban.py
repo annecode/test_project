@@ -9,6 +9,8 @@ import unittest
 from bs4 import BeautifulSoup as bs
 from common.http_requests import HttpRequests
 from ddt import ddt, data
+from lib.HTMLTestRunner import HTMLTestRunner
+import random
 
 
 def get_urls():
@@ -32,6 +34,7 @@ class TestDoubanApi(unittest.TestCase):
 
     @data(*get_urls())
     def test_url(self, data):
+        """测试豆瓣网页所有url"""
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
         }
@@ -39,8 +42,4 @@ class TestDoubanApi(unittest.TestCase):
         res_time = response.elapsed.total_seconds()
         print("{0} 接口响应时间是：{1}".format(data, res_time))
         self.assertEqual(response.status_code, 200, '接口响应不是200')
-        self.assertLessEqual(res_time, 1, '接口响应大于1s')
-
-
-if __name__ == '__main__':
-    unittest.main()
+        self.assertLessEqual(res_time, 2, '接口响应大于1s')

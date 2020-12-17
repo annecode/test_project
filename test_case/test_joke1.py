@@ -22,6 +22,7 @@ class TestApi1(unittest.TestCase):
 
     @log_print
     def test_joke(self):
+        """测试获取笑话接口"""
         payload = {
             "page": "1",
             "maxResult": "2",

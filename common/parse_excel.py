@@ -9,13 +9,13 @@ from openpyxl import load_workbook
 
 class ParseExcel:
     def __init__(self, excelPath, sheetName):
-        self.wb = load_workbook(excelPath)
+        self.wb = load_workbook(excelPath)  # 读取excel文件，创建对象
         self.sheet = self.wb[sheetName]
         self.maxRowNum = self.sheet.max_row
 
     def get_datas_from_sheet(self):
         dataList = []
-        for line in self.sheet.rows:  # line是元组
+        for line in self.sheet.rows:  # line是元组，逐行读取
             lineList = (line[0].value, line[1].value)
             dataList.append(lineList)
         return dataList[1:]

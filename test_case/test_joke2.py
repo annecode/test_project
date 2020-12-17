@@ -27,12 +27,14 @@ class TestApi2(unittest.TestCase):
         }
 
     def test_joke_post(self):
+        """测试获取笑话接口-post"""
         url = '341-1'
         res = TestApi2.http.post(url, self.payload)
         self.assertEqual(200, res[0], '请求返回非200')
         self.assertIn('showapi_res_code', res[1], '响应不包含showapi_res_code')
 
     def test_joke_get(self):
+        """测试获取笑话接口-get"""
         url = '341-1'
         res = TestApi2.http.get(url, self.payload)
         self.assertEqual(200, res[0], '请求返回非200')

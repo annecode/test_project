@@ -21,9 +21,4 @@ class TestExcelOutput(unittest.TestCase):
     def test_print(self, data):
         """测试excel数据里是否有anne"""
         name, age = data
-        print(name, age, data)
         self.assertTrue(name, age)
-
-
-if __name__ == '__main__':
-    unittest.main(verbosity=2)

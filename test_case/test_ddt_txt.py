@@ -16,6 +16,7 @@ class TestFactorial(unittest.TestCase):
 
     @file_data(file)
     def test_factorial(self, value):
+        """测试从txt文件中读测试数据"""
         data, exceptdata = value.split('-')
         print(data, exceptdata)
         res = reduce(lambda x, y: x*y, range(1, int(data)+1))
