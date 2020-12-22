@@ -23,4 +23,4 @@ if __name__ == '__main__':
     loader = unittest.TestLoader()
     suite.addTests(loader.discover(file_case))
     runner = BeautifulReport(suite)
-    runner.report(filename=f'测试报告_{current_time}', description='anne第二份报告', report_dir=path)
+    runner.report(filename=f'测试报告_{current_time}', description='anne第一份报告', report_dir=path)
