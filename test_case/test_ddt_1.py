@@ -22,5 +22,4 @@ class TestAdd(unittest.TestCase):
     def test_add(self, data1, data2, data3, exceptdata):
         """测试3个数的加法"""
         sum = data1 + data2 + data3
-        print(sum)
         self.assertEqual(sum, exceptdata)
