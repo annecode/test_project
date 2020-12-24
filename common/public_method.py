@@ -108,8 +108,7 @@ def get_key(in_json, target_list):
     """
     result = {}
     for key in target_list:
-        data = get_value_from_json(in_json, key)
-        result[key] = data
+        result[key] = get_value_from_json(in_json, key)
     return result
 
 
@@ -123,6 +122,6 @@ if __name__ == '__main__':
                           "newChinese": 77
                           }
             }
-    fields = ["chinese", "english"]
+    fields = ["小明", "english", "newChinese"]
     res = get_key(data, fields)
     print(res)
