@@ -16,7 +16,7 @@ class MyTest(unittest.TestCase):
         """测试两个数的大小"""
         self.assertTrue(first <= second)
 
-    @data((1, 1), (2, 4))
+    @data((1, 1), (3, 4))
     @unpack
     def test_factorial(self, data, exceptdata):
         """测试阶乘"""

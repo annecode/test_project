@@ -51,7 +51,7 @@ class TestQRCode(unittest.TestCase):
         """识别二维码文件接口测试"""
         url = '887-2'
         file_path = 'E:\\test\\anne_qrcode.png'
-        file = {"img": open("%s" % file_path, 'rb')}
+        file = {"img": open("%s" % file_path, 'r')}
         payload = {
             "img": file,
             "showapi_appid": TestQRCode.showapi_appid,

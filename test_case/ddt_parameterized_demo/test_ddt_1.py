@@ -23,3 +23,7 @@ class TestAdd(unittest.TestCase):
         """测试3个数的加法"""
         sum = data1 + data2 + data3
         self.assertEqual(sum, exceptdata)
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -8,7 +8,7 @@ import unittest
 from ddt import ddt, file_data
 from functools import reduce
 
-file = '../test_data/data.txt'
+file = '../../test_data/data.txt'
 
 
 @ddt
