@@ -23,7 +23,7 @@ if __name__ == '__main__':
     with open(filenmae, 'w') as fp:
         runner = HTMLTestRunner(
             stream=fp,
-            title=u'<豆瓣书单爬取>接口-测试报告',
-            description=u'第一份测试报告'
+            title='<anne>接口-测试报告',
+            description='第一份测试报告'
         )
         runner.run(suite)

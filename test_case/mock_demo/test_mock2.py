@@ -10,7 +10,7 @@ from test_case.pay_class import Payment
 
 
 class TestPayLevel(unittest.TestCase):
-    @unittest.skip('不执行')
+    # @unittest.skip('不执行')
     def test_001_first_level(self):
         """测试一级水平"""
         payment = Payment(50, 10, 'zfb')
@@ -19,7 +19,7 @@ class TestPayLevel(unittest.TestCase):
         print(result)
         self.assertEqual(result, "1-Level")
 
-    @unittest.skip('不执行')
+    # @unittest.skip('不执行')
     def test_002_second_level(self):
         """测试二级水平"""
         payment = Payment(40, 0.5, 'wx')
@@ -28,7 +28,7 @@ class TestPayLevel(unittest.TestCase):
         print(result)
         self.assertEqual(result, "2-Level")
 
-    @unittest.skip('不执行')
+    # @unittest.skip('不执行')
     def test_003_no_level(self):
         """测试其他水平"""
         payment = Payment(10, 0, 'dana')
