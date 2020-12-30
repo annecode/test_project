@@ -9,7 +9,7 @@ import unittest
 from ddt import ddt, data
 from common.parse_excel import ParseExcel
 
-excelPath = r'../test_data/data_excel.xlsx'
+excelPath = r'../../test_data/data_excel.xlsx'
 sheetName = 'testcase1'
 excel = ParseExcel(excelPath, sheetName)
 
@@ -18,7 +18,7 @@ excel = ParseExcel(excelPath, sheetName)
 class TestExcelOutput(unittest.TestCase):
     # excel.get_datas_from_sheet()方法返回一个嵌套列表，使用*excel进行解包，得到列表中的每个元素（即子列表-测试用例）
     @data(*excel.get_datas_from_sheet())
-    def test_print(self, data):
+    def test_print(self, value):
         """测试excel数据里是否有anne"""
-        name, age = data
+        name, age = value
         self.assertTrue(name, age)

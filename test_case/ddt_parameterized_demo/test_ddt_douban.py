@@ -24,7 +24,7 @@ def get_urls():
         idl = i.get('href')
         # id_img = i.img.get('src')
         url_list.append(idl)
-    return url_list
+    return url_list[:1]
 
 
 @ddt
