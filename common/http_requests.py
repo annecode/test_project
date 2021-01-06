@@ -39,8 +39,8 @@ class HttpRequests(object):
         # result = f'{response.url}接口响应是:\n{response.text}，接口耗时===>>> {res_time}'
         result = f'{response.url}接口耗时===>>> {res_time}'
         logging.info(result)
-        print(result.encoding)    # 这个是用来查看网页编码的
-        result.encoding = 'utf-8'   # 跟上一个结合来用，如果编码有乱码，则可以通过这个定义编码来改变
+        # print(result.encoding)    # 这个是用来查看网页编码的
+        # result.encoding = 'utf-8'   # 跟上一个结合来用，如果编码有乱码，则可以通过这个定义编码来改变
         return response.status_code, response.text, response.url
 
     # 封装post请求
@@ -57,10 +57,13 @@ class HttpRequests(object):
         return response.status_code, response.text, response.url
 
     # 将各种请求方法封装
-    def api_request(self, method, url, data=None, body=None, files=None, headers=None, cookies=None):
-        map = {"Get": self.get, "Post": self.post}
+    def api_request(self, method, url, *args):
+        map = {
+            "Get": self.get,
+            "Post": self.post
+        }
         api_method = map[method]
-        return api_method(url, data, body, files, headers, cookies)
+        return api_method(url, *args)
 
 
 if __name__ == '__main__':
@@ -71,5 +74,12 @@ if __name__ == '__main__':
         "showapi_appid": "467516",
         "showapi_sign": "5cd5bb087f864a08b16a3ecb27cf4172"
     }
+    payload1 = {
+        "page": "1",
+        "maxResult": "2",
+        "showapi_appid": "467516",
+        "showapi_sign": "5cd5bb087f864a08b16a3ecb27cf4172"
+    }
     api = HttpRequests(url)
-    api.api_request(method="Post", url="887-2", data=payload, files=file)
+    api.api_request("Post", "887-2", payload, file)
+    api.api_request("Get", "341-1", payload1)

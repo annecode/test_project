@@ -17,9 +17,11 @@ def get_urls():
     url = r"tag/编程?start=20&type=T"
     http = HttpRequests(host)
     result = http.get(url, headers=http.headers)
+    # print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~', result)
     html = result[1]
-    soup = bs(html, "html.parser")  # 定义一个BeautifulSoup变量
+    soup = bs(html, "html.parser")  # 定义一个BeautifulSoup变量, html.parser是特定解析器
     items = soup.find_all('a', attrs={'class': 'nbg'})
+    print('~~~~~~~~~~~~~~~~~~~~~~', items)
     for i in items:
         idl = i.get('href')
         # id_img = i.img.get('src')

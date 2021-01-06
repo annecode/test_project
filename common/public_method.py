@@ -9,6 +9,7 @@ import time
 import random
 import string
 import datetime
+import json
 
 FORMAT = '%(asctime)s--%(levelname)s: %(message)s'
 logging.basicConfig(format=FORMAT, level=logging.INFO)
@@ -113,15 +114,19 @@ def get_key(in_json, target_list):
 
 
 if __name__ == '__main__':
-    data = {"info": "2班成绩单",
-            "grades": {"小明": [{"chinese": 60}, {"math": 80}, {"english": 100}],
-                       "小红": [{"chinese": 90}, {"math": 70}, {"english": 50}],
-                       "小蓝": [{"chinese": 80}, {"math": 80}, {"english": 80}],
+    data = {"info": "2 grade",
+            "grades": {"xm": [{"chinese": 60}, {"math": 80}, {"english": 100}],
+                       "xh": [{"chinese": 90}, {"math": 70}, {"english": 50}],
+                       "xl": [{"chinese": 80}, {"math": 80}, {"english": 80}],
                        },
-            "newGrades": {"info": "新增数据",
+            "newGrades": {"info": "new data",
                           "newChinese": 77
                           }
             }
-    fields = ["小明", "english", "newChinese"]
+    fields = ["xm", "english", "newChinese"]
     res = get_key(data, fields)
     print(res)
+
+    # 使用参数让json数据格式化输出
+    data2 = json.dumps(data, sort_keys=True, indent=4, separators=(',', ':'))
+    print(data2)

@@ -5,10 +5,7 @@
 # filename: test_project/test_one
 
 import pytest
-import sys
-from collections import namedtuple
-Task = namedtuple('Task', ['name', 'age', 'sex', 'hobby'])
-Task.__new__.__defaults__ = (None, None, False, None)  # 创建默认task对象
+import requests
 
 
 @pytest.mark.run_case1
@@ -20,3 +17,18 @@ def test_passing():
 @pytest.mark.skip()
 def test_failing():
     assert (3, 2, 1) == (1, 2, 3)
+
+
+def test_001_name():
+    name = ['anne', 'yang', 'liao']
+    assert 'anne' in name
+
+
+def test_002_bd():
+    r = requests.get('http://www.baidu.com/')
+    # print(r.text)
+    assert 'baidu' in r.text
+
+
+if __name__ == '__main__':
+    pytest.main(['-v', '-s'])
