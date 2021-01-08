@@ -47,6 +47,7 @@ def test_005_zero_divsion():
         # raise ZeroDivisionError("second argument must != 0")
 
 
+@pytest.mark.flaky(reruns=2, reruns_delay=2)
 def test_006_value_error():
     # 上下文管理器生成一个ExceptionInfo对象，该对象可用于检查捕获的异常的详细信息
     value = 15
