@@ -32,6 +32,15 @@ class HttpRequests(object):
         else:
             print('data必须是字典')
 
+    # 将各种请求方法封装
+    def api_request(self, method, url, *args):
+        map = {
+            "Get": self.get,
+            "Post": self.post
+        }
+        api_method = map[method]
+        return api_method(url, *args)
+
     def get(self, url, data=None, headers=None, cookies=None):
         uri = self.host + url
         response = requests.get(uri, params=data, headers=headers, cookies=cookies, verify=False)
@@ -39,8 +48,6 @@ class HttpRequests(object):
         # result = f'{response.url}接口响应是:\n{response.text}，接口耗时===>>> {res_time}'
         result = f'{response.url}接口耗时===>>> {res_time}'
         logging.info(result)
-        # print(result.encoding)    # 这个是用来查看网页编码的
-        # result.encoding = 'utf-8'   # 跟上一个结合来用，如果编码有乱码，则可以通过这个定义编码来改变
         return response.status_code, response.text, response.url
 
     # 封装post请求
@@ -55,15 +62,6 @@ class HttpRequests(object):
         result = f'{api}接口响应是\n:{response.text}接口耗时===>>> {res_time}'
         logging.info(result)
         return response.status_code, response.text, response.url
-
-    # 将各种请求方法封装
-    def api_request(self, method, url, *args):
-        map = {
-            "Get": self.get,
-            "Post": self.post
-        }
-        api_method = map[method]
-        return api_method(url, *args)
 
 
 if __name__ == '__main__':
