@@ -8,11 +8,13 @@
 import pytest
 import sys
 from collections import namedtuple
+from test_case.pytest_demo.mark import *
+from test_case.pytest_demo.skip import *
 Task = namedtuple('Task', ['name', 'age', 'sex', 'hobby'])
 Task.__new__.__defaults__ = (None, None, False, None)  # 创建默认task对象
 
 
-@pytest.mark.skipif(condition=sys.platform.startswith('linux'), reason="linux system can't run")
+@skipif
 def test_001_defaults():
     """默认值的校验，如果是linux，就跳过此用例不执行"""
     t1 = Task()
@@ -29,22 +31,22 @@ def test_002_access():
     assert (t.sex, t.hobby) == (False, None)
 
 
-@pytest.mark.test
-@pytest.mark.prod
+@test
+@prod
 def test_003_asdict():
     """:return 返回一个字典， 预期执行失败，但执行成功，pytest控制台打印X"""
     t_task = Task('tang', 4, 'female', 'play')
     t_dict = t_task._asdict()
     excepted = {
         'name': 'tang',
-        'age': 5,
+        'age': 4,
         'sex': 'female',
         'hobby': 'play'
     }
     assert t_dict == excepted
 
 
-@pytest.mark.prod
+@prod
 def test_004_replace():
     """replace()改变数据"""
     t_before = Task('anne', 19, 'female')

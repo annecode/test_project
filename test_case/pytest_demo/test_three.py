@@ -5,6 +5,9 @@
 # filename: test_project/test_three
 
 import pytest
+import random
+import string
+from test_case.pytest_demo.mark import *
 
 
 # 针对模块级别，初始化
@@ -31,6 +34,7 @@ def test_number():
     assert 1 == 1
 
 
+@pre  # 会作用于类中的所有用例
 class TestDemo():
     # 针对类级别
     def setup_class(self):
@@ -53,9 +57,22 @@ class TestDemo():
     def teardown(self):
         print('teardown')
 
+    @test
     def test_01_add(self):
         print('莫须有的加法')
         assert 1 == 1
+
+    @prod
+    def test_02_random_number(self):
+        number_list = []
+        for i in range(10):
+            number_list.append(random.choice(string.digits))  # 随机选择数字
+            number_list.append(random.choice(string.ascii_lowercase))  # 随机选择小写字母
+            number_list.append(random.choice(string.ascii_uppercase))  # 随机选择大写字母
+            number_list.append(random.choice(string.ascii_letters))  # 随机选择大小写字母
+        number_list = ''.join(number_list)  # 列表转成字符串
+        print(number_list)
+        assert '8' in number_list
 
 
 if __name__ == '__main__':

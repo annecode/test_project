@@ -7,17 +7,19 @@
 import pytest
 import requests
 import time
+from test_case.pytest_demo.mark import *
+from test_case.pytest_demo.skip import *
 
 
-@pytest.mark.test
-@pytest.mark.prod
+@test
+@prod
 def test_001_passing():
     """无条件的跳过用例不执行"""
     assert (1, 2, 3) == (1, 2, 3)
     assert {1: 'a', 2: 'b'} == {1: 'a', 2: 'b'}
 
 
-# @pytest.mark.skip()
+@skip
 def test_002_failing():
     time.sleep(0.1)
     flag = True
@@ -25,12 +27,13 @@ def test_002_failing():
 
 
 def test_003_name():
+    pytest.skip("不想执行~~~~~~")
     name = ['anne', 'yang', 'liao']
     time.sleep(1)
     assert 'anne' not in name, 'why not exits'
 
 
-# @pytest.mark.test
+@test
 def test_004_bd():
     r = requests.get('http://www.baidu.com/')
     # print(r.headers)
@@ -60,4 +63,4 @@ def test_006_value_error():
 
 
 if __name__ == '__main__':
-    pytest.main(['./test_one.py::test_006_value_error', '-s', '--tb=line'])
+    pytest.main(['./test_one.py::test_003_name', '-s', '-v'])

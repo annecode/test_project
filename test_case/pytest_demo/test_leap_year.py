@@ -23,7 +23,11 @@ def is_leap_year(year):
 
 
 class Test_is_leap_year:
-    @pytest.mark.flaky(reruns=2, reruns_delay=3)
+    # 在测试类里，使用以下申明，给类下的所有测试方法打上标签
+    # pytestmark = pytest.mark.smoke  # 打单个标签
+    pytestmark = [pytest.mark.smoke, pytest.mark.pre]  # 打多个标签
+
+    @pytest.mark.flaky(reruns=2, reruns_delay=3)  # 重试2次，每次延时3s
     def test_001_exception_error(self):
         with pytest.raises(TypeError):
             print("等待重试1...")
@@ -44,4 +48,3 @@ class Test_is_leap_year:
 if __name__ == '__main__':
     # is_leap_year(1612)
     pytest.main(['./test_leap_year.py', '-v', '--tb=line', '--reruns', '2', '--reruns-delay', '3'])
-
