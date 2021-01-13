@@ -13,7 +13,7 @@ from test_case.pytest_demo.skip import *
 
 @test
 @prod
-def test_001_passing():
+def anne_001_passing():
     """无条件的跳过用例不执行"""
     assert (1, 2, 3) == (1, 2, 3)
     assert {1: 'a', 2: 'b'} == {1: 'a', 2: 'b'}
@@ -50,7 +50,7 @@ def test_005_zero_divsion():
         # raise ZeroDivisionError("second argument must != 0")
 
 
-@pytest.mark.flaky(reruns=2, reruns_delay=2)
+# @pytest.mark.flaky(reruns=2, reruns_delay=2)
 def test_006_value_error():
     # 上下文管理器生成一个ExceptionInfo对象，该对象可用于检查捕获的异常的详细信息
     value = 15
@@ -63,4 +63,4 @@ def test_006_value_error():
 
 
 if __name__ == '__main__':
-    pytest.main(['./test_one.py::test_003_name', '-s', '-v'])
+    pytest.main(['./test_one.py::anne_001_passing', '-s', '-v'])

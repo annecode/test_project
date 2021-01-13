@@ -125,8 +125,7 @@ if __name__ == '__main__':
             }
     fields = ["xm", "english", "newChinese"]
     res = get_key(data, fields)
-    print(res)
-
+    # print(res)
     # 使用参数让json数据格式化输出
-    data2 = json.dumps(data, sort_keys=True, indent=4, separators=(',', ':'))
-    print(data2)
+    res_final = json.dumps(res, sort_keys=True, indent=4, separators=(',', ':'))
+    print(res_final)

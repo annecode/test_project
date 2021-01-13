@@ -34,6 +34,11 @@ def test_number():
     assert 1 == 1
 
 
+def test_letters():
+    print('a和A不相等')
+    assert 'a' != 'A'
+
+
 @pre  # 会作用于类中的所有用例
 class TestDemo():
     # 针对类级别
