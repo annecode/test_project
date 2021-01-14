@@ -70,8 +70,10 @@ def random_letter_number(length=10, combination_type=0):
 # 返回2020-07-05 00:00:00，格式化
 def time_mktime(flag=None):
     current_time = datetime.datetime.now()
+    print(current_time)
     start_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
     end_time = (current_time + datetime.timedelta(days=1)).strftime("%Y-%m-%d %H:%M:%S")
+    print(end_time)
     if flag:
         return end_time
     else:
@@ -123,9 +125,11 @@ if __name__ == '__main__':
                           "newChinese": 77
                           }
             }
-    fields = ["xm", "english", "newChinese"]
-    res = get_key(data, fields)
-    # print(res)
-    # 使用参数让json数据格式化输出
-    res_final = json.dumps(res, sort_keys=True, indent=4, separators=(',', ':'))
-    print(res_final)
+    # fields = ["xm", "english", "newChinese"]
+    # res = get_key(data, fields)
+    # # print(res)
+    # # 使用参数让json数据格式化输出
+    # res_final = json.dumps(res, sort_keys=True, indent=4, separators=(',', ':'))
+    # print(res_final)
+
+    time_mktime()
