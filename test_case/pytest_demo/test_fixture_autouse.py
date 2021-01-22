@@ -8,7 +8,7 @@ import pytest
 
 
 # yield之前，每条测试用例运行前执行；yield之后，每条测试用例运行后执行
-@pytest.fixture(autouse=False)
+@pytest.fixture(autouse=True)
 def func1():
     print("execute func before testcase........")
     yield
