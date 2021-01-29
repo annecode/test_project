@@ -91,11 +91,11 @@ def get_value_from_json(in_json, target_key, results=None):
     if results is None:
         results = []
     if isinstance(in_json, dict):
-        for key in in_json.keys():
-            data = in_json[key]
-            get_value_from_json(data, target_key, results=results)
+        for key, value in in_json.items():
             if key == target_key:
-                results.append(data)
+                results.append(value)
+            else:
+                get_value_from_json(value, target_key, results=results)
     elif isinstance(in_json, (list, tuple)):
         for data in in_json:
             get_value_from_json(data, target_key, results=results)
@@ -111,7 +111,7 @@ def get_key(in_json, target_list):
     """
     result = {}
     for key in target_list:
-        result[key] = get_value_from_json(in_json, key)
+        result[key] = get_value_from_json(in_json, key)[0]
     return result
 
 
@@ -125,11 +125,14 @@ if __name__ == '__main__':
                           "newChinese": 77
                           }
             }
-    # fields = ["xm", "english", "newChinese"]
-    # res = get_key(data, fields)
-    # # print(res)
-    # # 使用参数让json数据格式化输出
-    # res_final = json.dumps(res, sort_keys=True, indent=4, separators=(',', ':'))
-    # print(res_final)
+    # target = "xl"
+    # result = get_value_from_json(data, target)
+    # print(result)
+    fields = ["xm", "english", "newChinese"]
+    res = get_key(data, fields)
+    print(res)
+    # 使用参数让json数据格式化输出
+    res_final = json.dumps(res, sort_keys=True, indent=4, separators=(',', ':'))
+    print(res_final)
 
-    time_mktime()
+    # time_mktime()

@@ -3,3 +3,5 @@
 # 自定义忽略文件
 /venv/*
 /report/*
+/common/api_test.py
+/test_case/yaml/*

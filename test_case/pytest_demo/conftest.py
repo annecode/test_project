@@ -11,4 +11,4 @@ import pytest
 def func():
     print("\nin session fixuture before testcase......")
     yield
-    print("in session fixture after testcase......")
+    print("\nin session fixture after testcase......")

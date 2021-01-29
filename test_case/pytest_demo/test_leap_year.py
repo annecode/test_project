@@ -31,7 +31,7 @@ class Test_is_leap_year:
     def test_001_exception_error(self):
         with pytest.raises(TypeError):
             print("等待重试1...")
-            is_leap_year(2019)
+        assert is_leap_year(2019) == True
 
     def test_002_exception_value(self):
         print("等待重试2...")

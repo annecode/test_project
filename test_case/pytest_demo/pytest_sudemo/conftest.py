@@ -9,6 +9,6 @@ import pytest
 
 @pytest.fixture(scope="session")
 def func():
-    print("\nin session fixuture before testcase......")
+    print("\n=========================in session fixuture before testcase......")
     yield
-    print("in session fixture after testcase......")
+    print("===========================in session fixture after testcase......")

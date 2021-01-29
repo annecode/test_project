@@ -37,5 +37,20 @@ def test_str_reverse1(data, excepted):
     assert res == excepted, f"3: {res}与{excepted}不一致"
 
 
+params = ["anne", 18]
+@pytest.mark.parametrize('data', params)
+def test_str_reverse2(data):
+    print("data=", data)
+    assert isinstance(data, int), "只能是整型"
+
+
+params_1 = ["name", "23", 18, (12,)]
+ids = [f'test_{d}' for d in range(len(params_1))]  # 生成与数据数量相等的名称列表
+@pytest.mark.parametrize('data', params_1, ids=ids)
+def test_str(data):
+    print(f"data={data}, type={type(data)}")
+    assert isinstance(data, int), "只能是整型"
+
+
 if __name__ == '__main__':
     pytest.main()
