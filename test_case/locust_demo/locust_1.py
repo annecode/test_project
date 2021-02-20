@@ -8,3 +8,4 @@ from locust import HttpUser, TaskSet, between
 
 def login(req):
     req.client.post()
+    pass
