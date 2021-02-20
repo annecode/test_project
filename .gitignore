@@ -5,3 +5,4 @@
 /report/*
 /common/api_test.py
 /test_case/yaml/*
+/test_case/company_api/*

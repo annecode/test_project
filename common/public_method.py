@@ -10,11 +10,42 @@ import random
 import string
 import datetime
 import json
+import re
+from collections.abc import MutableMapping
 
 FORMAT = '%(asctime)s--%(levelname)s: %(message)s'
 logging.basicConfig(format=FORMAT, level=logging.INFO)
 
+class Mapping(MutableMapping):
+    def __init__(self, *args, **kwargs):
+        self.__dict__.update(*args, **kwargs)
 
+    def __setitem__(self, key, value):
+        self.__dict__[key] = value
+
+    def __getitem__(self, key):
+        return self.__dict__[key]
+
+    def __delitem__(self, key):
+        del self.__dict__[key]
+
+    def __iter__(self):
+        return iter(self.__dict__)
+
+    def __len__(self):
+        return len(self.__dict__)
+
+    def __str__(self):
+        return str(self.__dict__)
+
+    def __repr__(self):
+        return '{}, Mapping({})'.format(super(Mapping, self).__repr__(),
+                                        self.__dict__)
+
+
+m = Mapping()
+
+# 装饰器
 def log_print(func):
     def wrapper(*params):
         logging.info('-----------------------%s方法开始执行-----------------------' % func.__name__)
@@ -24,6 +55,44 @@ def log_print(func):
         after = time.time()
         logging.info(f'{func.__name__}接口耗时%.3f' % (after - before))
     return wrapper
+
+
+def get_do(input_key):
+    output_value = m.get(input_key)
+    return output_value
+
+
+def your_func():
+    pass
+
+
+# 动态传参自定义函数
+def map_func(func_name, *args, **kwargs):
+    map = {'random_string': get_timestamp,
+           'your_func': your_func
+           }
+    return map[func_name](*args, **kwargs)
+
+
+# 动态传参
+def dynamic_parameter(params):
+    params_str = json.dumps(params, ensure_ascii=False)
+    if '{{' in params_str:
+        key_list = re.findall("{{([^}}]+)", params_str)
+        for key in key_list:
+            value = get_do(key)
+            params_str = params_str.replace('{{' + key + '}}', value)
+
+    if '{%' in params_str:
+        func_list = re.findall("{%([^%}]+)", params_str)
+        for func in func_list:
+            func_name = func.split(' ')[1]
+
+            var_list = func.split(' ')[2: -1]
+            value = map_func(func_name, *var_list)
+            params_str = params_str.replace('{%' + func + '%}', value)
+
+    return json.loads(params_str)
 
 
 def random_letter_number(length=10, combination_type=0):
@@ -79,6 +148,10 @@ def time_mktime(flag=None):
     else:
         return start_time
 
+# 生成时间戳，毫秒级
+def get_timestamp(length=19):
+    timestr_ms = str(round(time.time(), 10**9))[:int(length)]
+    return timestr_ms
 
 def get_value_from_json(in_json, target_key, results=None):
     """

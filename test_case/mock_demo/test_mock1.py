@@ -29,7 +29,6 @@ class MockDemo(unittest.TestCase):
         count = Count()
         count.add = mock.Mock(side_effect=[1, 2, 3])  # side_effect返回值会覆盖return_value的值，值必须是可迭代的，如列表、元组、字典
         # print(count.add())
-        # print(count.add())
         result = count.add(4, 6)
         print(result)
         self.assertEqual(13, result)
