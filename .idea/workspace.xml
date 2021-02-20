@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c55029fc-1139-4ad6-8f95-bdcbb2fe8d84" name="默认的" comment="修改了公共方法，获取value的值">
+      <change afterPath="$PROJECT_DIR$/test_case/company_api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_case/company_api/add_order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_case/locust_demo/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_case/locust_demo/locust_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/http_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/http_requests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/public_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/public_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/mock_demo/test_mock1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/mock_demo/test_mock1.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="git@github.com:annecode/test_project.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1loGunAB71in0KBym7NdnMAM7RL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="新增" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last.edited.regexp" value="Sample Text" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="yiiguxing.plugin.translate" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="test_project" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="test_project" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\test_project\test_case\pytest_demo\pytest_sudemo" />
+      <recent name="D:\PycharmProjects\test_project\test_case\pytest_demo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\test_project\test_case\pytest_demo\pytest_sudemo" />
+      <recent name="D:\PycharmProjects\test_project" />
+      <recent name="D:\PycharmProjects\test_project\main" />
+      <recent name="D:\PycharmProjects\test_project\config" />
+      <recent name="D:\PycharmProjects\test_project\test_case\api_demo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.http_requests">
+    <configuration name="[20]有效的括号" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[20]有效的括号.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="api_test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/api_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="http_requests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/http_requests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="public_method" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/public_method.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/pytest_demo&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_parametrize.test_str" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_parametrize.test_str&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in pytest_demo" type="tests" factoryName="py.test" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/pytest_demo&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_parametrize.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/pytest_demo/test_parametrize.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.api_test" />
+      <item itemvalue="Python.public_method" />
+      <item itemvalue="Python.[20]有效的括号" />
+      <item itemvalue="Python 测试.pytest in pytest_demo" />
+      <item itemvalue="Python 测试.pytest in test_parametrize.py" />
+      <item itemvalue="Python 测试.pytest for test_parametrize.test_str" />
+      <item itemvalue="Python.http_requests" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.http_requests" />
+        <item itemvalue="Python 测试.pytest in test_parametrize.py" />
+        <item itemvalue="Python.[20]有效的括号" />
+        <item itemvalue="Python.public_method" />
+        <item itemvalue="Python 测试.pytest for test_parametrize.test_str" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="支持测试报告&#10;支持beauti测试报告">
+      <created>1608203917977</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608203917977</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c55029fc-1139-4ad6-8f95-bdcbb2fe8d84" name="默认的" comment="" />
+      <created>1608256259373</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608256259373</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mock学习">
+      <created>1608638134046</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608638134046</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Revert &quot;mock学习&quot;&#10;&#10;This reverts commit 36d77467">
+      <created>1608638597247</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608638597247</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;mock学习&quot;&#10;This reverts commit 36d77467">
+      <created>1608639037149</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608639037149</updated>
+    </task>
+    <task id="LOCAL-00005" summary="mock学习-再次">
+      <created>1608639206178</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608639206178</updated>
+    </task>
+    <task id="LOCAL-00006" summary="mock学习-第2天">
+      <created>1608728824695</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608728824695</updated>
+    </task>
+    <task id="LOCAL-00007" summary="mock学习-第3天">
+      <created>1608807932187</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608807932187</updated>
+    </task>
+    <task id="LOCAL-00008" summary="mock学习-第4天">
+      <created>1608896221889</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608896221890</updated>
+    </task>
+    <task id="LOCAL-00009" summary="mock学习-第5天，完结">
+      <created>1609332631953</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609332631953</updated>
+    </task>
+    <task id="LOCAL-00010" summary="pytest-1day">
+      <created>1609932688216</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609932688216</updated>
+    </task>
+    <task id="LOCAL-00011" summary="pytest-2day">
+      <created>1610087761401</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1610087761401</updated>
+    </task>
+    <task id="LOCAL-00012" summary="pytest-2day">
+      <created>1610105500068</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610105500068</updated>
+    </task>
+    <task id="LOCAL-00013" summary="pytest-3day">
+      <created>1610452354741</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610452354741</updated>
+    </task>
+    <task id="LOCAL-00014" summary="pytest-4day-45课">
+      <created>1610540546143</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610540546143</updated>
+    </task>
+    <task id="LOCAL-00015" summary="pytest-day-代码更新">
+      <created>1610621496208</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1610621496209</updated>
+    </task>
+    <task id="LOCAL-00016" summary="pytest-ddt">
+      <created>1611315285739</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611315285739</updated>
+    </task>
+    <task id="LOCAL-00017" summary="修改了公共方法，获取value的值">
+      <created>1611902585682</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611902585682</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="BEK_SORT_TYPE" value="1" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="支持测试报告&#10;支持beauti测试报告" />
+    <MESSAGE value="mock学习" />
+    <MESSAGE value="Revert &quot;mock学习&quot;&#10;&#10;This reverts commit 36d77467" />
+    <MESSAGE value="&quot;mock学习&quot;&#10;This reverts commit 36d77467" />
+    <MESSAGE value="mock学习-再次" />
+    <MESSAGE value="mock学习-第2天" />
+    <MESSAGE value="mock学习-第3天" />
+    <MESSAGE value="mock学习-第4天" />
+    <MESSAGE value="mock学习-第5天，完结" />
+    <MESSAGE value="pytest-1day" />
+    <MESSAGE value="pytest-2day" />
+    <MESSAGE value="pytest-3day" />
+    <MESSAGE value="pytest-4day-45课" />
+    <MESSAGE value="pytest-day-代码更新" />
+    <MESSAGE value="pytest-ddt" />
+    <MESSAGE value="修改了公共方法，获取value的值" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了公共方法，获取value的值" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611636302669">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1611636302669" />
+    <state x="93" y="93" width="1350" height="648" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1608868301634">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="93" y="93" width="1350" height="648" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.834@0.0.1536.834" timestamp="1608868301634" />
+    <state x="602" y="207" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610506534057">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="602" y="207" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1610506534057" />
+    <state x="498" y="206" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1610451213018">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="498" y="206" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.834@0.0.1536.834" timestamp="1610451213018" />
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608193038698">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1608193038698" />
+    <state x="469" y="5" key="#run_test_pytest" timestamp="1611635845789">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="469" y="5" key="#run_test_pytest/0.0.1536.834@0.0.1536.834" timestamp="1611635845789" />
+    <state x="395" y="96" key="#检查" timestamp="1610528838612">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="395" y="96" key="#检查/0.0.1536.834@0.0.1536.834" timestamp="1610528838612" />
+    <state x="436" y="0" key="CommitChangelistDialog2" timestamp="1611631767232">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="436" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1611631767232" />
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1608639252366">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1608639252366" />
+    <state x="748" y="148" key="FileChooserDialogImpl" timestamp="1612440698818">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1280.689@0.0.1536.834" timestamp="1609151551866" />
+    <state x="748" y="148" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1612440698818" />
+    <state width="1493" height="281" key="GridCell.Tab.0.bottom" timestamp="1613817078371">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="281" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1613817078371" />
+    <state width="1493" height="281" key="GridCell.Tab.0.center" timestamp="1613817078370">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="281" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1613817078370" />
+    <state width="1493" height="281" key="GridCell.Tab.0.left" timestamp="1613817078370">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="281" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1613817078370" />
+    <state width="1493" height="281" key="GridCell.Tab.0.right" timestamp="1613817078371">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="281" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1613817078371" />
+    <state width="1493" height="233" key="GridCell.Tab.1.bottom" timestamp="1611919238086">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="233" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1611919238086" />
+    <state width="1493" height="233" key="GridCell.Tab.1.center" timestamp="1611919238086">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="233" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1611919238086" />
+    <state width="1493" height="233" key="GridCell.Tab.1.left" timestamp="1611919238086">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="233" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1611919238086" />
+    <state width="1493" height="233" key="GridCell.Tab.1.right" timestamp="1611919238086">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="233" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1611919238086" />
+    <state x="349" y="160" key="IDE.errors.dialog" timestamp="1608865164985">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834@0.0.1536.834" timestamp="1608865164985" />
+    <state x="147" y="66" key="MergeDialog" timestamp="1610452391450">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="147" y="66" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1610452391450" />
+    <state x="397" y="170" key="MultipleFileMergeDialog" timestamp="1610452391456">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="397" y="170" key="MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1610452391456" />
+    <state x="270" y="62" key="SettingsEditor" timestamp="1611631543677">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="270" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1611631543677" />
+    <state x="617" y="325" key="VCS.ChangelistChooser" timestamp="1608639115781">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="617" y="325" key="VCS.ChangelistChooser/0.0.1536.834@0.0.1536.834" timestamp="1608639115781" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1611902594729">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1611902594729" />
+    <state x="590" y="327" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609984421524">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="590" y="327" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1609984421524" />
+    <state x="277" y="167" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1611308804221">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="277" y="167" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.834@0.0.1536.834" timestamp="1611308804221" />
+    <state x="468" y="133" width="599" height="634" key="find.popup" timestamp="1610521955878">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="468" y="133" width="599" height="634" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1610521955878" />
+    <state x="533" y="285" width="573" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1611021457185">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="533" y="285" width="573" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.834@0.0.1536.834" timestamp="1611021457185" />
+    <state x="430" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1611281782757">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="430" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1611281782757" />
+  </component>
+</project>
