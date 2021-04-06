@@ -26,16 +26,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c55029fc-1139-4ad6-8f95-bdcbb2fe8d84" name="默认的" comment="修改了公共方法，获取value的值">
-      <change afterPath="$PROJECT_DIR$/test_case/company_api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_case/company_api/add_order.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_case/locust_demo/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_case/locust_demo/locust_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/http_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/http_requests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/public_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/public_method.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/mock_demo/test_mock1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/mock_demo/test_mock1.py" afterDir="false" />
+    <list default="true" id="c55029fc-1139-4ad6-8f95-bdcbb2fe8d84" name="默认的" comment="python接口编写">
+      <change afterPath="$PROJECT_DIR$/test_case/ant_forest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_case/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/test_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +57,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1loGunAB71in0KBym7NdnMAM7RL" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="新增" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -75,7 +69,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last.edited.regexp" value="Sample Text" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="yiiguxing.plugin.translate" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -98,7 +92,7 @@
       <recent name="D:\PycharmProjects\test_project\test_case\api_demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.http_requests">
+  <component name="RunManager" selected="Python.test">
     <configuration name="[20]有效的括号" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -183,6 +177,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_case/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -197,22 +212,6 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/pytest_demo&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_parametrize.test_str" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="test_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_parametrize.test_str&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest in pytest_demo" type="tests" factoryName="py.test" nameIsGenerated="true">
@@ -249,20 +248,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.api_test" />
-      <item itemvalue="Python.public_method" />
       <item itemvalue="Python.[20]有效的括号" />
-      <item itemvalue="Python 测试.pytest in pytest_demo" />
-      <item itemvalue="Python 测试.pytest in test_parametrize.py" />
-      <item itemvalue="Python 测试.pytest for test_parametrize.test_str" />
       <item itemvalue="Python.http_requests" />
+      <item itemvalue="Python.public_method" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python tests.pytest in pytest_demo" />
+      <item itemvalue="Python tests.pytest in test_parametrize.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.http_requests" />
-        <item itemvalue="Python 测试.pytest in test_parametrize.py" />
         <item itemvalue="Python.[20]有效的括号" />
         <item itemvalue="Python.public_method" />
-        <item itemvalue="Python 测试.pytest for test_parametrize.test_str" />
       </list>
     </recent_temporary>
   </component>
@@ -396,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611902585682</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="python接口编写">
+      <created>1613822554197</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1613822554197</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -441,17 +446,14 @@
     <MESSAGE value="pytest-day-代码更新" />
     <MESSAGE value="pytest-ddt" />
     <MESSAGE value="修改了公共方法，获取value的值" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了公共方法，获取value的值" />
+    <MESSAGE value="python接口编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="python接口编写" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611636302669">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1611636302669" />
-    <state x="93" y="93" width="1350" height="648" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1608868301634">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="93" y="93" width="1350" height="648" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.834@0.0.1536.834" timestamp="1608868301634" />
     <state x="602" y="207" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610506534057">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -460,10 +462,6 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="498" y="206" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.834@0.0.1536.834" timestamp="1610451213018" />
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608193038698">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1608193038698" />
     <state x="469" y="5" key="#run_test_pytest" timestamp="1611635845789">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -476,51 +474,47 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="436" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1611631767232" />
-    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1608639252366">
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1613822878712">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1608639252366" />
-    <state x="748" y="148" key="FileChooserDialogImpl" timestamp="1612440698818">
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1613822878712" />
+    <state x="748" y="148" key="FileChooserDialogImpl" timestamp="1617695374091">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1280.689@0.0.1536.834" timestamp="1609151551866" />
-    <state x="748" y="148" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1612440698818" />
-    <state width="1493" height="281" key="GridCell.Tab.0.bottom" timestamp="1613817078371">
+    <state x="748" y="148" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1617695374091" />
+    <state width="1493" height="281" key="GridCell.Tab.0.bottom" timestamp="1615454306906">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1613817078371" />
-    <state width="1493" height="281" key="GridCell.Tab.0.center" timestamp="1613817078370">
+    <state width="1493" height="281" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1615454306906" />
+    <state width="1493" height="281" key="GridCell.Tab.0.center" timestamp="1615454306906">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1613817078370" />
-    <state width="1493" height="281" key="GridCell.Tab.0.left" timestamp="1613817078370">
+    <state width="1493" height="281" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1615454306906" />
+    <state width="1493" height="281" key="GridCell.Tab.0.left" timestamp="1615454306906">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1613817078370" />
-    <state width="1493" height="281" key="GridCell.Tab.0.right" timestamp="1613817078371">
+    <state width="1493" height="281" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1615454306906" />
+    <state width="1493" height="281" key="GridCell.Tab.0.right" timestamp="1615454306906">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1613817078371" />
-    <state width="1493" height="233" key="GridCell.Tab.1.bottom" timestamp="1611919238086">
+    <state width="1493" height="281" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1615454306906" />
+    <state width="1493" height="233" key="GridCell.Tab.1.bottom" timestamp="1614942505237">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1611919238086" />
-    <state width="1493" height="233" key="GridCell.Tab.1.center" timestamp="1611919238086">
+    <state width="1493" height="233" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614942505237" />
+    <state width="1493" height="233" key="GridCell.Tab.1.center" timestamp="1614942505236">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1611919238086" />
-    <state width="1493" height="233" key="GridCell.Tab.1.left" timestamp="1611919238086">
+    <state width="1493" height="233" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1614942505236" />
+    <state width="1493" height="233" key="GridCell.Tab.1.left" timestamp="1614942505236">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1611919238086" />
-    <state width="1493" height="233" key="GridCell.Tab.1.right" timestamp="1611919238086">
+    <state width="1493" height="233" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1614942505236" />
+    <state width="1493" height="233" key="GridCell.Tab.1.right" timestamp="1614942505237">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1611919238086" />
-    <state x="349" y="160" key="IDE.errors.dialog" timestamp="1608865164985">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834@0.0.1536.834" timestamp="1608865164985" />
+    <state width="1493" height="233" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1614942505237" />
     <state x="147" y="66" key="MergeDialog" timestamp="1610452391450">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -529,18 +523,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="397" y="170" key="MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1610452391456" />
-    <state x="270" y="62" key="SettingsEditor" timestamp="1611631543677">
+    <state x="270" y="62" key="SettingsEditor" timestamp="1617695605927">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="270" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1611631543677" />
-    <state x="617" y="325" key="VCS.ChangelistChooser" timestamp="1608639115781">
+    <state x="270" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1617695605927" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1613822557561">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="617" y="325" key="VCS.ChangelistChooser/0.0.1536.834@0.0.1536.834" timestamp="1608639115781" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1611902594729">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1611902594729" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1613822557561" />
     <state x="590" y="327" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609984421524">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
