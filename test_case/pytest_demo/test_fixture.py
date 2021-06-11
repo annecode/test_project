@@ -9,10 +9,12 @@ import pytest
 
 @pytest.fixture()
 def get_list():
+    print("执行开始")
     data = [1, 2, 3]
+    data1 = (1, 2, 3)
+    yield data, data1
+    print("执行结束")
     assert data == [1, 2, 3]  # 若fixture中断言失败，则对应的测试用例也会失败
-    return data
-
 
 @pytest.fixture()
 def get_dict():
@@ -29,7 +31,8 @@ def call_each(get_list):
 
 def test_get_list(get_list):
     value = 1
-    assert value in get_list
+    print("正在执行")
+    assert value in get_list[0]
 
 
 def test_get_dict(get_dict):

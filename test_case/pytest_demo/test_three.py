@@ -40,7 +40,7 @@ def test_letters():
 
 
 @pre  # 会作用于类中的所有用例
-class TestDemo():
+class TestDemo:
     # 针对类级别
     def setup_class(self):
         print('setup_class')

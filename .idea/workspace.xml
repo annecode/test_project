@@ -19,23 +19,20 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c55029fc-1139-4ad6-8f95-bdcbb2fe8d84" name="默认的" comment="python接口编写">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/tuya.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirement.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test_project.iml" afterDir="false" />
+    <list default="true" id="c55029fc-1139-4ad6-8f95-bdcbb2fe8d84" name="默认的" comment="pytest.ini配置项学习">
+      <change afterPath="$PROJECT_DIR$/common/get_email_otp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/tuya.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/tuya.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/pytest_demo/test_one.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/pytest_demo/test_one.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/pytest_demo/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/pytest_demo/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/pytest_demo/mark.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/pytest_demo/mark.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/pytest_demo/test_fixture.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/pytest_demo/test_fixture.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/pytest_demo/test_three.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/pytest_demo/test_three.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +98,7 @@
       <recent name="D:\PycharmProjects\test_project\test_case\api_demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Python 测试.pytest for test_one.test_005_zero_divsion">
+  <component name="RunManager" selected="Python 测试.pytest for test_fixture.test_get_list">
     <configuration name="api_test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -115,48 +112,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/api_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="run_test_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="test_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/run_test_class.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="run_test_html" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="test_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/run_test_html.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,7 +136,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_one.test_004_bd" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_fixture_function.test_01" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -193,11 +148,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_one.test_004_bd&quot;" />
+      <option name="_new_target" value="&quot;test_fixture_function.test_01&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_one.test_005_zero_divsion" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_fixture.test_get_list" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="test_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -209,7 +164,55 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_one.test_005_zero_divsion&quot;" />
+      <option name="_new_target" value="&quot;test_fixture.test_get_list&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_fixture.test_info" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_fixture.test_info&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_three.TestDemo" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_three.TestDemo&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_three.test_number" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="test_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_three.test_number&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -229,38 +232,22 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_one.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="test_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/pytest_demo/test_one.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.api_test" />
-      <item itemvalue="Python.run_test_class" />
-      <item itemvalue="Python.run_test_html" />
       <item itemvalue="Python 测试.pytest in pytest_demo" />
-      <item itemvalue="Python 测试.pytest in test_one.py" />
-      <item itemvalue="Python 测试.pytest for test_one.test_004_bd" />
-      <item itemvalue="Python 测试.pytest for test_one.test_005_zero_divsion" />
+      <item itemvalue="Python 测试.pytest for test_fixture_function.test_01" />
+      <item itemvalue="Python 测试.pytest for test_fixture.test_get_list" />
+      <item itemvalue="Python 测试.pytest for test_fixture.test_info" />
+      <item itemvalue="Python 测试.pytest for test_three.test_number" />
+      <item itemvalue="Python 测试.pytest for test_three.TestDemo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python 测试.pytest for test_one.test_005_zero_divsion" />
-        <item itemvalue="Python 测试.pytest for test_one.test_004_bd" />
-        <item itemvalue="Python 测试.pytest in test_one.py" />
-        <item itemvalue="Python.run_test_html" />
-        <item itemvalue="Python.run_test_class" />
+        <item itemvalue="Python 测试.pytest for test_fixture.test_get_list" />
+        <item itemvalue="Python 测试.pytest for test_three.TestDemo" />
+        <item itemvalue="Python 测试.pytest for test_three.test_number" />
+        <item itemvalue="Python 测试.pytest for test_fixture.test_info" />
+        <item itemvalue="Python 测试.pytest for test_fixture_function.test_01" />
       </list>
     </recent_temporary>
   </component>
@@ -401,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613822554197</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="pytest.ini配置项学习">
+      <created>1619340498482</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1619340498482</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -416,7 +410,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -448,80 +442,73 @@
     <MESSAGE value="pytest-ddt" />
     <MESSAGE value="修改了公共方法，获取value的值" />
     <MESSAGE value="python接口编写" />
-    <option name="LAST_COMMIT_MESSAGE" value="python接口编写" />
+    <MESSAGE value="pytest.ini配置项学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="pytest.ini配置项学习" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611636302669">
+    <state x="314" y="136" key="FileChooserDialogImpl" timestamp="1623313565863">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1611636302669" />
-    <state x="469" y="5" key="#run_test_pytest" timestamp="1611635845789">
+    <state x="314" y="136" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1623313565863" />
+    <state width="1478" height="243" key="GridCell.Tab.0.bottom" timestamp="1623393855590">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="469" y="5" key="#run_test_pytest/0.0.1536.834@0.0.1536.834" timestamp="1611635845789" />
-    <state x="436" y="0" key="CommitChangelistDialog2" timestamp="1611631767232">
+    <state width="1478" height="243" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1623393855590" />
+    <state width="1478" height="243" key="GridCell.Tab.0.center" timestamp="1623393855590">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="436" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1611631767232" />
-    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1613822878712">
+    <state width="1478" height="243" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1623393855590" />
+    <state width="1478" height="243" key="GridCell.Tab.0.left" timestamp="1623393855590">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1613822878712" />
-    <state x="314" y="136" key="FileChooserDialogImpl" timestamp="1619336813576">
+    <state width="1478" height="243" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1623393855590" />
+    <state width="1478" height="243" key="GridCell.Tab.0.right" timestamp="1623393855590">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="314" y="136" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1619336813576" />
-    <state width="1515" height="334" key="GridCell.Tab.0.bottom" timestamp="1619338184093">
+    <state width="1478" height="243" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1623393855590" />
+    <state width="1478" height="243" key="GridCell.Tab.1.bottom" timestamp="1623393855589">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="334" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619338184093" />
-    <state width="1515" height="334" key="GridCell.Tab.0.center" timestamp="1619338184093">
+    <state width="1478" height="243" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1623393855589" />
+    <state width="1478" height="243" key="GridCell.Tab.1.center" timestamp="1623393855589">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="334" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619338184093" />
-    <state width="1515" height="334" key="GridCell.Tab.0.left" timestamp="1619338184093">
+    <state width="1478" height="243" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1623393855589" />
+    <state width="1478" height="243" key="GridCell.Tab.1.left" timestamp="1623393855589">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="334" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619338184093" />
-    <state width="1515" height="334" key="GridCell.Tab.0.right" timestamp="1619338184093">
+    <state width="1478" height="243" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1623393855589" />
+    <state width="1478" height="243" key="GridCell.Tab.1.right" timestamp="1623393855589">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="334" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619338184093" />
-    <state width="1493" height="233" key="GridCell.Tab.1.bottom" timestamp="1614942505237">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614942505237" />
-    <state width="1493" height="233" key="GridCell.Tab.1.center" timestamp="1614942505236">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1614942505236" />
-    <state width="1493" height="233" key="GridCell.Tab.1.left" timestamp="1614942505236">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1614942505236" />
-    <state width="1493" height="233" key="GridCell.Tab.1.right" timestamp="1614942505237">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1614942505237" />
+    <state width="1478" height="243" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1623393855589" />
     <state x="270" y="62" key="SettingsEditor" timestamp="1619321861761">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="270" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619321861761" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1613822557561">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1619340514737">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1613822557561" />
-    <state x="277" y="167" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1611308804221">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619340514737" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1623240417451">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="277" y="167" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.834@0.0.1536.834" timestamp="1611308804221" />
-    <state x="533" y="285" width="573" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1611021457185">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="533" y="285" width="573" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.834@0.0.1536.834" timestamp="1611021457185" />
-    <state x="430" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1611281782757">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="430" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1611281782757" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1623240417451" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/pytest_demo/test_fixture.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/pytest_demo/test_fixture.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
