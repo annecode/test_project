@@ -1,0 +1,589 @@
+Index: common/public_method.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#!/usr/bin/env python\r\n# -*- coding: utf-8 -*-\r\n# author: anne\r\n# datetime: 2020-12-03 13:59\r\n# filename: test_project/public_method\r\n\r\nimport logging\r\nimport time\r\nimport random\r\nimport string\r\nimport datetime\r\nimport json\r\nimport re\r\nfrom collections.abc import MutableMapping\r\n\r\nFORMAT = '%(asctime)s--%(levelname)s: %(message)s'\r\nlogging.basicConfig(format=FORMAT, level=logging.INFO)\r\n\r\nclass Mapping(MutableMapping):\r\n    def __init__(self, *args, **kwargs):\r\n        self.__dict__.update(*args, **kwargs)\r\n\r\n    def __setitem__(self, key, value):\r\n        self.__dict__[key] = value\r\n\r\n    def __getitem__(self, key):\r\n        return self.__dict__[key]\r\n\r\n    def __delitem__(self, key):\r\n        del self.__dict__[key]\r\n\r\n    def __iter__(self):\r\n        return iter(self.__dict__)\r\n\r\n    def __len__(self):\r\n        return len(self.__dict__)\r\n\r\n    def __str__(self):\r\n        return str(self.__dict__)\r\n\r\n    def __repr__(self):\r\n        return '{}, Mapping({})'.format(super(Mapping, self).__repr__(),\r\n                                        self.__dict__)\r\n\r\n\r\nm = Mapping()\r\n\r\n# 装饰器\r\ndef log_print(func):\r\n    def wrapper(*params):\r\n        logging.info('-----------------------%s方法开始执行-----------------------' % func.__name__)\r\n        before = time.time()\r\n        result = func(*params)\r\n        logging.info(f'{func.__name__}响应结果：\\n{result}')\r\n        after = time.time()\r\n        logging.info(f'{func.__name__}接口耗时%.3f' % (after - before))\r\n    return wrapper\r\n\r\n\r\ndef get_do(input_key):\r\n    output_value = m.get(input_key)\r\n    return output_value\r\n\r\n\r\ndef your_func():\r\n    pass\r\n\r\n\r\n# 动态传参自定义函数\r\ndef map_func(func_name, *args, **kwargs):\r\n    map = {'random_string': get_timestamp,\r\n           'your_func': your_func\r\n           }\r\n    return map[func_name](*args, **kwargs)\r\n\r\n\r\n# 动态传参\r\ndef dynamic_parameter(params):\r\n    params_str = json.dumps(params, ensure_ascii=False)\r\n    if '{{' in params_str:\r\n        key_list = re.findall(\"{{([^}}]+)\", params_str)\r\n        for key in key_list:\r\n            value = get_do(key)\r\n            params_str = params_str.replace('{{' + key + '}}', value)\r\n\r\n    if '{%' in params_str:\r\n        func_list = re.findall(\"{%([^%}]+)\", params_str)\r\n        for func in func_list:\r\n            func_name = func.split(' ')[1]\r\n\r\n            var_list = func.split(' ')[2: -1]\r\n            value = map_func(func_name, *var_list)\r\n            params_str = params_str.replace('{%' + func + '%}', value)\r\n\r\n    return json.loads(params_str)\r\n\r\n\r\ndef random_letter_number(length=10, combination_type=0):\r\n    \"\"\"\r\n    默认生成10位的混合数字密码\r\n    :param length:返回字符串长度\r\n    :param combination_type:组合方式 0为数字大写字母 1为纯数字 2为纯大写字母 3为大小写数字混合\r\n    :return:随机字符串\r\n    \"\"\"\r\n    length = int(length)\r\n    com_type = int(combination_type)\r\n    letter_list = []\r\n    number_list = []\r\n    if com_type == 0:\r\n        len_of_letter = random.randint(1, length)\r\n        len_of_number = length - len_of_letter\r\n        for i in range(len_of_letter):\r\n            letter_list.append(random.choice(string.ascii_uppercase))\r\n        for i in range(len_of_number):\r\n            number_list.append(random.choice(string.digits))\r\n        combination_list = letter_list + number_list\r\n        random.shuffle(combination_list)  # 将列表的元素随机排序\r\n        return \"\".join(combination_list)\r\n    elif com_type == 1:\r\n        for i in range(length):\r\n            number_list.append(random.choice(string.digits))\r\n        return \"\".join(number_list)\r\n    elif com_type == 2:\r\n        for i in range(length):\r\n            letter_list.append(random.choice(string.ascii_uppercase))\r\n        return \"\".join(letter_list)\r\n    elif com_type == 3:\r\n        len_of_letter = random.randint(1, length)\r\n        len_of_number = length - len_of_letter\r\n        for i in range(len_of_letter):\r\n            letter_list.append(random.choice(string.ascii_letters))\r\n        for i in range(len_of_number):\r\n            number_list.append(random.choice(string.digits))\r\n        combination_list = letter_list + number_list\r\n        random.shuffle(combination_list)\r\n        return \"\".join(combination_list)\r\n\r\n\r\n# 返回2020-07-05 00:00:00，格式化\r\ndef time_mktime(flag=None):\r\n    current_time = datetime.datetime.now()\r\n    print(current_time)\r\n    start_time = current_time.strftime(\"%Y-%m-%d %H:%M:%S\")\r\n    end_time = (current_time + datetime.timedelta(days=1)).strftime(\"%Y-%m-%d %H:%M:%S\")\r\n    print(end_time)\r\n    if flag:\r\n        return end_time\r\n    else:\r\n        return start_time\r\n\r\n# 生成时间戳，毫秒级\r\ndef get_timestamp(length=19):\r\n    timestr_ms = str(round(time.time(), 10**9))[:int(length)]\r\n    return timestr_ms\r\n\r\ndef get_value_from_json(in_json, target_key, results=None):\r\n    \"\"\"\r\n    从嵌套字典中获取目标key的值\r\n    :param in_json: 字典\r\n    :param target_key: 目标key\r\n    :param results: 目标key的值\r\n    :return: 目标key的所有值\r\n    \"\"\"\r\n    if results is None:\r\n        results = []\r\n    if isinstance(in_json, dict):\r\n        for key, value in in_json.items():\r\n            if key == target_key:\r\n                results.append(value)\r\n            else:\r\n                get_value_from_json(value, target_key, results=results)\r\n    elif isinstance(in_json, (list, tuple)):\r\n        for data in in_json:\r\n            get_value_from_json(data, target_key, results=results)\r\n    return results\r\n\r\n\r\ndef get_key(in_json, target_list):\r\n    \"\"\"\r\n    批量查找目标key对应的值\r\n    :param in_json: 字典\r\n    :param target_list: 目标key列表\r\n    :return: 目标key列表对应的所有值\r\n    \"\"\"\r\n    result = {}\r\n    for key in target_list:\r\n        result[key] = get_value_from_json(in_json, key)[0]\r\n    return result\r\n\r\n\r\nif __name__ == '__main__':\r\n    data = {\"info\": \"2 grade\",\r\n            \"grades\": {\"xm\": [{\"chinese\": 60}, {\"math\": 80}, {\"english\": 100}],\r\n                       \"xh\": [{\"chinese\": 90}, {\"math\": 70}, {\"english\": 50}],\r\n                       \"xl\": [{\"chinese\": 80}, {\"math\": 80}, {\"english\": 80}],\r\n                       },\r\n            \"newGrades\": {\"info\": \"new data\",\r\n                          \"newChinese\": 77\r\n                          }\r\n            }\r\n    # target = \"xl\"\r\n    # result = get_value_from_json(data, target)\r\n    # print(result)\r\n    fields = [\"xm\", \"english\", \"newChinese\"]\r\n    res = get_key(data, fields)\r\n    print(res)\r\n    # 使用参数让json数据格式化输出\r\n    res_final = json.dumps(res, sort_keys=True, indent=4, separators=(',', ':'))\r\n    print(res_final)\r\n\r\n    # time_mktime()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- common/public_method.py	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
++++ common/public_method.py	(date 1624193677646)
+@@ -87,7 +87,6 @@
+         func_list = re.findall("{%([^%}]+)", params_str)
+         for func in func_list:
+             func_name = func.split(' ')[1]
+-
+             var_list = func.split(' ')[2: -1]
+             value = map_func(func_name, *var_list)
+             params_str = params_str.replace('{%' + func + '%}', value)
+Index: test_case/ant_forest.py
+===================================================================
+--- test_case/ant_forest.py	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
++++ test_case/ant_forest.py	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
+@@ -1,46 +0,0 @@
+-#!/usr/bin/env python
+-# -*- coding: utf-8 -*-
+-# author: anne
+-# datetime: 2021-03-04 14:20
+-# filename: test_project/ant_forest.py
+-
+-import uiautomator2 as u2
+-import time
+-import random
+-
+-# d = u2.connect()  # 有线连接，手机需要插电脑上
+-d = u2.connect("192.168.0.108")  # 通过无线连接，电脑和手机需要在同一个局域网内，并且需要先用有线的方式做过初始化
+-
+-# d.app_stop("com.eg.android.AlipayGphone")
+-
+-print("打开支付宝")
+-d.app_start("com.eg.android.AlipayGphone")
+-time.sleep(2)  # 休眠2s等待支付宝完全启动
+-
+-print("打开蚂蚁森林，等待5s……")
+-d(text="蚂蚁森林").click()
+-time.sleep(5)  # 我手机比较卡，进入蚂蚁森林后还需要几秒钟才能完全加载完
+-
+-
+-def collectEnergy(cnt):
+-    print("开始第%d次偷能量！" % cnt)
+-    # 开始扫描点击有能力出现的区域
+-    for x in range(150, 1000, 150):
+-        for y in range(600, 900, 150):
+-            d.long_click(x + random.randint(10, 20), y + random.randint(10, 20), 0.1)
+-            time.sleep(0.01)
+-            if cnt != 1:
+-                d.click(536, 1816)
+-
+-
+-cnt = 1
+-while True:
+-    collectEnergy(cnt)
+-    a = d.xpath("//*[@resource-id='J_tree_dialog_wrap']").get().bounds
+-    d.click(1000, a[3] - 80)  # 找能量按钮的坐标
+-    # 如果页面出现了“返回我的森林”说明已经没有能量可偷了，结束
+-    if d.xpath('//*[@text="返回我的森林"]').click_exists(timeout=2.0):
+-        break
+-    cnt += 1
+-print("###结束###")
+-# d.app_stop("com.eg.android.AlipayGphone") # 退出支付宝
+Index: pages/baidu_home_page.py
+===================================================================
+--- pages/baidu_home_page.py	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
++++ pages/baidu_home_page.py	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
+@@ -1,8 +0,0 @@
+-#!/usr/bin/env python
+-# -*- coding: utf-8 -*-
+-# author: anne-home
+-# datetime: 2020-12-13 10:58
+-# filename: test_project/baidu_home_page
+-
+-
+-from page_objects import page_element, PageObject
+\ No newline at end of file
+Index: pages/__init__.py
+===================================================================
+--- pages/__init__.py	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
++++ pages/__init__.py	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
+@@ -1,5 +0,0 @@
+-#!/usr/bin/env python
+-# -*- coding: utf-8 -*-
+-# author: anne-home
+-# datetime: 2020-12-12 15:58
+-# filename: test_project/__init__.py
+Index: test_case/pytest_demo/test_tenacity.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#!/usr/bin/env python\r\n# -*- coding: utf-8 -*-\r\n# author: anne\r\n# datetime: 2021-01-08 18:10\r\n# filename: test_project/test_tenacity\r\n\r\nimport time\r\nfrom tenacity import retry, wait_fixed, stop_after_attempt, stop_after_delay\r\n\r\n\r\n\r\n@retry\r\ndef test_001_retry():\r\n    print(\"等待重试，重试无间隔执行...\")\r\n    raise Exception\r\n\r\n\r\n@retry(wait=wait_fixed(2))\r\ndef test_002_retry():\r\n    print(\"等待重试，固定间隔2s...\")\r\n    raise Exception\r\n\r\n\r\n@retry(stop=stop_after_attempt(3))\r\ndef test_003_retry():\r\n    print(\"等待重试，上次总共尝试次数>=3，停止...\")\r\n    raise Exception\r\n\r\n\r\n@retry(stop=stop_after_delay(4))\r\ndef test_004_retry():\r\n    print(\"等待重试，从第1次尝试开始，累积用时>=4s，停止...\")\r\n    time.sleep(3)\r\n    raise Exception\r\n\r\n\r\n# &：2个条件都满足才会停止\r\n# |：任何一个满足都会停止\r\n@retry(stop=(stop_after_delay(5) & stop_after_attempt(3)))\r\ndef test_005_retry():\r\n    print(\"等待重试，从第一次尝试开始，累积用时>=5s，停止...\")\r\n    # print(\"等待重试，判断上次总共尝试次数>=3，停止...\")\r\n    time.sleep(1)\r\n    raise Exception\r\n\r\n\r\nif __name__ == '__main__':\r\n    # test_001_retry()\r\n    # test_002_retry()\r\n    # test_003_retry()\r\n    # test_004_retry()\r\n    test_005_retry()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- test_case/pytest_demo/test_tenacity.py	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
++++ test_case/pytest_demo/test_tenacity.py	(date 1619279766232)
+@@ -8,7 +8,6 @@
+ from tenacity import retry, wait_fixed, stop_after_attempt, stop_after_delay
+ 
+ 
+-
+ @retry
+ def test_001_retry():
+     print("等待重试，重试无间隔执行...")
+Index: pytest.ini
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[pytest]\r\n# 指定测试用例搜索路径\r\ntestpaths = test_case\r\n\r\n# pytest默认查找测试用例的规则\r\npython_files = test_* _test* test*\r\npython_classes = Test* test*\r\npython_functions = test* anne*\r\n\r\n# 指定执行命令的参数\r\naddopts = -v -s --tb=short --reruns=2 --reruns-delay=1\r\n\r\n# 注册标记，防范拼写错误\r\nmarkers =\r\n    smoke: run smoke test functions in test environment\r\n    test: run test functions in test environment\r\n    pre: run pre test functions in pre-publish environment\r\n    prod: run prod test functions in product environment\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- pytest.ini	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
++++ pytest.ini	(date 1619279698880)
+@@ -1,16 +1,16 @@
+ [pytest]
+-# 指定测试用例搜索路径
++# Specify the testcase search path
+ testpaths = test_case
+ 
+-# pytest默认查找测试用例的规则
++# pytest find testcase rules
+ python_files = test_* _test* test*
+ python_classes = Test* test*
+ python_functions = test* anne*
+ 
+-# 指定执行命令的参数
+-addopts = -v -s --tb=short --reruns=2 --reruns-delay=1
++# Specify the parameters of the execution command
++addopts = -v -s --tb=short
+ 
+-# 注册标记，防范拼写错误
++# register mark in order to prevent spelling error
+ markers =
+     smoke: run smoke test functions in test environment
+     test: run test functions in test environment
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Encoding\" addBOMForNewFiles=\"with NO BOM\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/encodings.xml	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
++++ .idea/encodings.xml	(date 1619279041513)
+@@ -1,4 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="Encoding" addBOMForNewFiles="with NO BOM" />
++  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
++    <file url="file://$PROJECT_DIR$/pytest.ini" charset="UTF-8" />
++    <file url="PROJECT" charset="UTF-8" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: .idea/test_project.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <excludeFolder url=\"file://$MODULE_DIR$/venv\" />\r\n    </content>\r\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.7 (venv)\" jdkType=\"Python SDK\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n  <component name=\"PackageRequirementsSettings\">\r\n    <option name=\"requirementsPath\" value=\"D:\\PycharmProjects\\test_project\\test_case\\pytest_demo\" />\r\n  </component>\r\n  <component name=\"TestRunnerService\">\r\n    <option name=\"PROJECT_TEST_RUNNER\" value=\"pytest\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/test_project.iml	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
++++ .idea/test_project.iml	(date 1621756175503)
+@@ -4,11 +4,11 @@
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/venv" />
+     </content>
+-    <orderEntry type="jdk" jdkName="Python 3.7 (venv)" jdkType="Python SDK" />
++    <orderEntry type="jdk" jdkName="Python 3.8 (test_project)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+   <component name="PackageRequirementsSettings">
+-    <option name="requirementsPath" value="D:\PycharmProjects\test_project\test_case\pytest_demo" />
++    <option name="requirementsPath" value="D:\workspace\test_project" />
+   </component>
+   <component name="TestRunnerService">
+     <option name="PROJECT_TEST_RUNNER" value="pytest" />
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"BRANCH:origin/master\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </select>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"c55029fc-1139-4ad6-8f95-bdcbb2fe8d84\" name=\"默认的\" comment=\"python接口编写\">\r\n      <change afterPath=\"$PROJECT_DIR$/test_case/ant_forest.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/test_case/test.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/test_project.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/test_project.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"SOFT\" />\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"hiddenUrls\">\r\n      <set>\r\n        <option value=\"git@github.com:annecode/test_project.git\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1loGunAB71in0KBym7NdnMAM7RL\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"last.edited.regexp\" value=\"Sample Text\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"terminal\" />\r\n  </component>\r\n  <component name=\"PyConsoleOptionsProvider\">\r\n    <option name=\"myPythonConsoleState\">\r\n      <console-settings module-name=\"test_project\" is-module-sdk=\"true\">\r\n        <option name=\"myUseModuleSdk\" value=\"true\" />\r\n        <option name=\"myModuleName\" value=\"test_project\" />\r\n      </console-settings>\r\n    </option>\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\PycharmProjects\\test_project\\test_case\\pytest_demo\\pytest_sudemo\" />\r\n      <recent name=\"D:\\PycharmProjects\\test_project\\test_case\\pytest_demo\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\PycharmProjects\\test_project\\test_case\\pytest_demo\\pytest_sudemo\" />\r\n      <recent name=\"D:\\PycharmProjects\\test_project\" />\r\n      <recent name=\"D:\\PycharmProjects\\test_project\\main\" />\r\n      <recent name=\"D:\\PycharmProjects\\test_project\\config\" />\r\n      <recent name=\"D:\\PycharmProjects\\test_project\\test_case\\api_demo\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python.test\">\r\n    <configuration name=\"[20]有效的括号\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"test_project\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[20]有效的括号.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"api_test\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\r\n      <module name=\"test_project\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/common\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/common/api_test.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"http_requests\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"test_project\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/common\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/common/http_requests.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"public_method\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"test_project\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/common\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/common/public_method.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"test\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"test_project\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/test_case\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/test_case/test.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"tests\" factoryName=\"py.test\">\r\n      <module name=\"test_project\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"C:\\Users\\anne\\AppData\\Local\\Programs\\Python\\Python39\\python.exe\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/test_case/pytest_demo\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_keywords\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_parameters\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;$PROJECT_DIR$/test_case/pytest_demo&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PATH&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"pytest in pytest_demo\" type=\"tests\" factoryName=\"py.test\" nameIsGenerated=\"true\">\r\n      <module name=\"test_project\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/test_case/pytest_demo\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_keywords\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_parameters\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;$PROJECT_DIR$/test_case/pytest_demo&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PATH&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"pytest in test_parametrize.py\" type=\"tests\" factoryName=\"py.test\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"test_project\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"C:\\Users\\anne\\AppData\\Local\\Programs\\Python\\Python39\\python.exe\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/test_case/pytest_demo\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_keywords\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_parameters\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;$PROJECT_DIR$/test_case/pytest_demo/test_parametrize.py&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PATH&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Python.api_test\" />\r\n      <item itemvalue=\"Python.[20]有效的括号\" />\r\n      <item itemvalue=\"Python.http_requests\" />\r\n      <item itemvalue=\"Python.public_method\" />\r\n      <item itemvalue=\"Python.test\" />\r\n      <item itemvalue=\"Python tests.pytest in pytest_demo\" />\r\n      <item itemvalue=\"Python tests.pytest in test_parametrize.py\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.test\" />\r\n        <item itemvalue=\"Python.http_requests\" />\r\n        <item itemvalue=\"Python.[20]有效的括号\" />\r\n        <item itemvalue=\"Python.public_method\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task id=\"LOCAL-00001\" summary=\"支持测试报告&#10;支持beauti测试报告\">\r\n      <created>1608203917977</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1608203917977</updated>\r\n    </task>\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"c55029fc-1139-4ad6-8f95-bdcbb2fe8d84\" name=\"默认的\" comment=\"\" />\r\n      <created>1608256259373</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1608256259373</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"mock学习\">\r\n      <created>1608638134046</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1608638134046</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Revert &quot;mock学习&quot;&#10;&#10;This reverts commit 36d77467\">\r\n      <created>1608638597247</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1608638597247</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"&quot;mock学习&quot;&#10;This reverts commit 36d77467\">\r\n      <created>1608639037149</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1608639037149</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"mock学习-再次\">\r\n      <created>1608639206178</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1608639206178</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"mock学习-第2天\">\r\n      <created>1608728824695</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1608728824695</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"mock学习-第3天\">\r\n      <created>1608807932187</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1608807932187</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"mock学习-第4天\">\r\n      <created>1608896221889</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1608896221890</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"mock学习-第5天，完结\">\r\n      <created>1609332631953</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1609332631953</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"pytest-1day\">\r\n      <created>1609932688216</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1609932688216</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"pytest-2day\">\r\n      <created>1610087761401</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1610087761401</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"pytest-2day\">\r\n      <created>1610105500068</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1610105500068</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"pytest-3day\">\r\n      <created>1610452354741</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1610452354741</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"pytest-4day-45课\">\r\n      <created>1610540546143</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1610540546143</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"pytest-day-代码更新\">\r\n      <created>1610621496208</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1610621496209</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"pytest-ddt\">\r\n      <created>1611315285739</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1611315285739</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"修改了公共方法，获取value的值\">\r\n      <created>1611902585682</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1611902585682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"python接口编写\">\r\n      <created>1613822554197</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1613822554197</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"19\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"BEK_SORT_TYPE\" value=\"1\" />\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/master\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"支持测试报告&#10;支持beauti测试报告\" />\r\n    <MESSAGE value=\"mock学习\" />\r\n    <MESSAGE value=\"Revert &quot;mock学习&quot;&#10;&#10;This reverts commit 36d77467\" />\r\n    <MESSAGE value=\"&quot;mock学习&quot;&#10;This reverts commit 36d77467\" />\r\n    <MESSAGE value=\"mock学习-再次\" />\r\n    <MESSAGE value=\"mock学习-第2天\" />\r\n    <MESSAGE value=\"mock学习-第3天\" />\r\n    <MESSAGE value=\"mock学习-第4天\" />\r\n    <MESSAGE value=\"mock学习-第5天，完结\" />\r\n    <MESSAGE value=\"pytest-1day\" />\r\n    <MESSAGE value=\"pytest-2day\" />\r\n    <MESSAGE value=\"pytest-3day\" />\r\n    <MESSAGE value=\"pytest-4day-45课\" />\r\n    <MESSAGE value=\"pytest-day-代码更新\" />\r\n    <MESSAGE value=\"pytest-ddt\" />\r\n    <MESSAGE value=\"修改了公共方法，获取value的值\" />\r\n    <MESSAGE value=\"python接口编写\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"python接口编写\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"223\" y=\"72\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1611636302669\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"223\" y=\"72\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834\" timestamp=\"1611636302669\" />\r\n    <state x=\"602\" y=\"207\" key=\"#com.intellij.fileTypes.FileTypeChooser\" timestamp=\"1610506534057\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"602\" y=\"207\" key=\"#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834\" timestamp=\"1610506534057\" />\r\n    <state x=\"498\" y=\"206\" key=\"#com.intellij.ide.util.TreeClassChooserDialog\" timestamp=\"1610451213018\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"498\" y=\"206\" key=\"#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.834@0.0.1536.834\" timestamp=\"1610451213018\" />\r\n    <state x=\"469\" y=\"5\" key=\"#run_test_pytest\" timestamp=\"1611635845789\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"469\" y=\"5\" key=\"#run_test_pytest/0.0.1536.834@0.0.1536.834\" timestamp=\"1611635845789\" />\r\n    <state x=\"395\" y=\"96\" key=\"#检查\" timestamp=\"1610528838612\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"395\" y=\"96\" key=\"#检查/0.0.1536.834@0.0.1536.834\" timestamp=\"1610528838612\" />\r\n    <state x=\"436\" y=\"0\" key=\"CommitChangelistDialog2\" timestamp=\"1611631767232\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"436\" y=\"0\" key=\"CommitChangelistDialog2/0.0.1536.834@0.0.1536.834\" timestamp=\"1611631767232\" />\r\n    <state x=\"93\" y=\"93\" width=\"1350\" height=\"648\" key=\"DiffContextDialog\" timestamp=\"1613822878712\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"93\" y=\"93\" width=\"1350\" height=\"648\" key=\"DiffContextDialog/0.0.1536.834@0.0.1536.834\" timestamp=\"1613822878712\" />\r\n    <state x=\"748\" y=\"148\" key=\"FileChooserDialogImpl\" timestamp=\"1617695374091\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"549\" y=\"172\" key=\"FileChooserDialogImpl/0.0.1536.834/1920.0.1280.689@0.0.1536.834\" timestamp=\"1609151551866\" />\r\n    <state x=\"748\" y=\"148\" key=\"FileChooserDialogImpl/0.0.1536.834@0.0.1536.834\" timestamp=\"1617695374091\" />\r\n    <state width=\"1493\" height=\"281\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1615454306906\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"281\" key=\"GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834\" timestamp=\"1615454306906\" />\r\n    <state width=\"1493\" height=\"281\" key=\"GridCell.Tab.0.center\" timestamp=\"1615454306906\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"281\" key=\"GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834\" timestamp=\"1615454306906\" />\r\n    <state width=\"1493\" height=\"281\" key=\"GridCell.Tab.0.left\" timestamp=\"1615454306906\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"281\" key=\"GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834\" timestamp=\"1615454306906\" />\r\n    <state width=\"1493\" height=\"281\" key=\"GridCell.Tab.0.right\" timestamp=\"1615454306906\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"281\" key=\"GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834\" timestamp=\"1615454306906\" />\r\n    <state width=\"1493\" height=\"233\" key=\"GridCell.Tab.1.bottom\" timestamp=\"1614942505237\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"233\" key=\"GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834\" timestamp=\"1614942505237\" />\r\n    <state width=\"1493\" height=\"233\" key=\"GridCell.Tab.1.center\" timestamp=\"1614942505236\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"233\" key=\"GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834\" timestamp=\"1614942505236\" />\r\n    <state width=\"1493\" height=\"233\" key=\"GridCell.Tab.1.left\" timestamp=\"1614942505236\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"233\" key=\"GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834\" timestamp=\"1614942505236\" />\r\n    <state width=\"1493\" height=\"233\" key=\"GridCell.Tab.1.right\" timestamp=\"1614942505237\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"233\" key=\"GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834\" timestamp=\"1614942505237\" />\r\n    <state x=\"147\" y=\"66\" key=\"MergeDialog\" timestamp=\"1610452391450\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"147\" y=\"66\" key=\"MergeDialog/0.0.1536.834@0.0.1536.834\" timestamp=\"1610452391450\" />\r\n    <state x=\"397\" y=\"170\" key=\"MultipleFileMergeDialog\" timestamp=\"1610452391456\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"397\" y=\"170\" key=\"MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834\" timestamp=\"1610452391456\" />\r\n    <state x=\"270\" y=\"62\" key=\"SettingsEditor\" timestamp=\"1617695605927\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"270\" y=\"62\" key=\"SettingsEditor/0.0.1536.834@0.0.1536.834\" timestamp=\"1617695605927\" />\r\n    <state x=\"361\" y=\"146\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1613822557561\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"361\" y=\"146\" key=\"Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834\" timestamp=\"1613822557561\" />\r\n    <state x=\"590\" y=\"327\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1609984421524\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"590\" y=\"327\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834\" timestamp=\"1609984421524\" />\r\n    <state x=\"277\" y=\"167\" key=\"com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2\" timestamp=\"1611308804221\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"277\" y=\"167\" key=\"com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.834@0.0.1536.834\" timestamp=\"1611308804221\" />\r\n    <state x=\"468\" y=\"133\" width=\"599\" height=\"634\" key=\"find.popup\" timestamp=\"1610521955878\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"468\" y=\"133\" width=\"599\" height=\"634\" key=\"find.popup/0.0.1536.834@0.0.1536.834\" timestamp=\"1610521955878\" />\r\n    <state x=\"533\" y=\"285\" width=\"573\" height=\"284\" key=\"org.intellij.images.editor.actions.BackgroundImageDialog\" timestamp=\"1611021457185\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"533\" y=\"285\" width=\"573\" height=\"284\" key=\"org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.834@0.0.1536.834\" timestamp=\"1611021457185\" />\r\n    <state x=\"430\" y=\"155\" width=\"672\" height=\"678\" key=\"search.everywhere.popup\" timestamp=\"1611281782757\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\r\n    </state>\r\n    <state x=\"430\" y=\"155\" width=\"672\" height=\"678\" key=\"search.everywhere.popup/0.0.1536.834@0.0.1536.834\" timestamp=\"1611281782757\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
++++ .idea/workspace.xml	(date 1626851636113)
+@@ -27,11 +27,16 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="c55029fc-1139-4ad6-8f95-bdcbb2fe8d84" name="默认的" comment="python接口编写">
+-      <change afterPath="$PROJECT_DIR$/test_case/ant_forest.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test_case/test.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/test_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test_project.iml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/common/public_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/public_method.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pages/__init__.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/pages/baidu_home_page.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/test_case/ant_forest.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/test_case/pytest_demo/test_tenacity.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/pytest_demo/test_tenacity.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -69,7 +74,7 @@
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="last.edited.regexp" value="Sample Text" />
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+-    <property name="settings.editor.selected.configurable" value="terminal" />
++    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+   </component>
+   <component name="PyConsoleOptionsProvider">
+     <option name="myPythonConsoleState">
+@@ -92,8 +97,8 @@
+       <recent name="D:\PycharmProjects\test_project\test_case\api_demo" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Python.test">
+-    <configuration name="[20]有效的括号" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="Python 测试.pytest in testclass_1.py">
++    <configuration name="api_test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+       <module name="test_project" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+@@ -101,11 +106,11 @@
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn" />
+-      <option name="IS_MODULE_SDK" value="false" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
++      <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[20]有效的括号.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/api_test.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -114,107 +119,87 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="api_test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
++    <configuration default="true" type="tests" factoryName="py.test">
+       <module name="test_project" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+-      <envs>
+-        <env name="PYTHONUNBUFFERED" value="1" />
+-      </envs>
+-      <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+-      <option name="IS_MODULE_SDK" value="true" />
++      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
++      <option name="IS_MODULE_SDK" value="false" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/api_test.py" />
+-      <option name="PARAMETERS" value="" />
+-      <option name="SHOW_COMMAND_LINE" value="false" />
+-      <option name="EMULATE_TERMINAL" value="false" />
+-      <option name="MODULE_MODE" value="false" />
+-      <option name="REDIRECT_INPUT" value="false" />
+-      <option name="INPUT_FILE" value="" />
++      <option name="_new_keywords" value="&quot;&quot;" />
++      <option name="_new_parameters" value="&quot;&quot;" />
++      <option name="_new_additionalArguments" value="&quot;&quot;" />
++      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/pytest_demo&quot;" />
++      <option name="_new_targetType" value="&quot;PATH&quot;" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="http_requests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="pytest for test_fixture.test_info" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+       <module name="test_project" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+-      <envs>
+-        <env name="PYTHONUNBUFFERED" value="1" />
+-      </envs>
+-      <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
++      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/http_requests.py" />
+-      <option name="PARAMETERS" value="" />
+-      <option name="SHOW_COMMAND_LINE" value="false" />
+-      <option name="EMULATE_TERMINAL" value="false" />
+-      <option name="MODULE_MODE" value="false" />
+-      <option name="REDIRECT_INPUT" value="false" />
+-      <option name="INPUT_FILE" value="" />
++      <option name="_new_keywords" value="&quot;&quot;" />
++      <option name="_new_parameters" value="&quot;&quot;" />
++      <option name="_new_additionalArguments" value="&quot;&quot;" />
++      <option name="_new_target" value="&quot;test_fixture.test_info&quot;" />
++      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="public_method" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="pytest for test_leap_year.Test_is_leap_year" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+       <module name="test_project" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+-      <envs>
+-        <env name="PYTHONUNBUFFERED" value="1" />
+-      </envs>
+-      <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
++      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/public_method.py" />
+-      <option name="PARAMETERS" value="" />
+-      <option name="SHOW_COMMAND_LINE" value="false" />
+-      <option name="EMULATE_TERMINAL" value="false" />
+-      <option name="MODULE_MODE" value="false" />
+-      <option name="REDIRECT_INPUT" value="false" />
+-      <option name="INPUT_FILE" value="" />
++      <option name="_new_keywords" value="&quot;&quot;" />
++      <option name="_new_parameters" value="&quot;&quot;" />
++      <option name="_new_additionalArguments" value="&quot;&quot;" />
++      <option name="_new_target" value="&quot;test_leap_year.Test_is_leap_year&quot;" />
++      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="pytest for test_leap_year.Test_is_leap_year.test_002_exception_value" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+       <module name="test_project" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+-      <envs>
+-        <env name="PYTHONUNBUFFERED" value="1" />
+-      </envs>
+-      <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case" />
++      <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_case/test.py" />
+-      <option name="PARAMETERS" value="" />
+-      <option name="SHOW_COMMAND_LINE" value="false" />
+-      <option name="EMULATE_TERMINAL" value="false" />
+-      <option name="MODULE_MODE" value="false" />
+-      <option name="REDIRECT_INPUT" value="false" />
+-      <option name="INPUT_FILE" value="" />
++      <option name="_new_keywords" value="&quot;&quot;" />
++      <option name="_new_parameters" value="&quot;&quot;" />
++      <option name="_new_additionalArguments" value="&quot;&quot;" />
++      <option name="_new_target" value="&quot;test_leap_year.Test_is_leap_year.test_002_exception_value&quot;" />
++      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+       <method v="2" />
+     </configuration>
+-    <configuration default="true" type="tests" factoryName="py.test">
++    <configuration name="pytest for test_worng_pwd.TestWrongPwd" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+       <module name="test_project" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+       <option name="SDK_HOME" value="C:\Users\anne\AppData\Local\Programs\Python\Python39\python.exe" />
+       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/pytest_demo" />
+-      <option name="IS_MODULE_SDK" value="false" />
++      <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <option name="_new_keywords" value="&quot;&quot;" />
+       <option name="_new_parameters" value="&quot;&quot;" />
+       <option name="_new_additionalArguments" value="&quot;&quot;" />
+-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/pytest_demo&quot;" />
+-      <option name="_new_targetType" value="&quot;PATH&quot;" />
++      <option name="_new_target" value="&quot;test_worng_pwd.TestWrongPwd&quot;" />
++      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="pytest in pytest_demo" type="tests" factoryName="py.test" nameIsGenerated="true">
++    <configuration name="pytest in test_fixture_autouse.py" type="tests" factoryName="py.test" nameIsGenerated="true">
+       <module name="test_project" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+@@ -226,11 +211,11 @@
+       <option name="_new_keywords" value="&quot;&quot;" />
+       <option name="_new_parameters" value="&quot;&quot;" />
+       <option name="_new_additionalArguments" value="&quot;&quot;" />
+-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/pytest_demo&quot;" />
++      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/pytest_demo/test_fixture_autouse.py&quot;" />
+       <option name="_new_targetType" value="&quot;PATH&quot;" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="pytest in test_parametrize.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
++    <configuration name="pytest in testclass_1.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+       <module name="test_project" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+@@ -242,25 +227,26 @@
+       <option name="_new_keywords" value="&quot;&quot;" />
+       <option name="_new_parameters" value="&quot;&quot;" />
+       <option name="_new_additionalArguments" value="&quot;&quot;" />
+-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/pytest_demo/test_parametrize.py&quot;" />
++      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/testclass_1.py&quot;" />
+       <option name="_new_targetType" value="&quot;PATH&quot;" />
+       <method v="2" />
+     </configuration>
+     <list>
+       <item itemvalue="Python.api_test" />
+-      <item itemvalue="Python.[20]有效的括号" />
+-      <item itemvalue="Python.http_requests" />
+-      <item itemvalue="Python.public_method" />
+-      <item itemvalue="Python.test" />
+-      <item itemvalue="Python tests.pytest in pytest_demo" />
+-      <item itemvalue="Python tests.pytest in test_parametrize.py" />
++      <item itemvalue="Python 测试.pytest in test_fixture_autouse.py" />
++      <item itemvalue="Python 测试.pytest for test_leap_year.Test_is_leap_year" />
++      <item itemvalue="Python 测试.pytest for test_leap_year.Test_is_leap_year.test_002_exception_value" />
++      <item itemvalue="Python 测试.pytest for test_worng_pwd.TestWrongPwd" />
++      <item itemvalue="Python 测试.pytest for test_fixture.test_info" />
++      <item itemvalue="Python 测试.pytest in testclass_1.py" />
+     </list>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Python.test" />
+-        <item itemvalue="Python.http_requests" />
+-        <item itemvalue="Python.[20]有效的括号" />
+-        <item itemvalue="Python.public_method" />
++        <item itemvalue="Python 测试.pytest in testclass_1.py" />
++        <item itemvalue="Python 测试.pytest for test_fixture.test_info" />
++        <item itemvalue="Python 测试.pytest for test_leap_year.Test_is_leap_year.test_002_exception_value" />
++        <item itemvalue="Python 测试.pytest for test_leap_year.Test_is_leap_year" />
++        <item itemvalue="Python 测试.pytest for test_worng_pwd.TestWrongPwd" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -450,106 +436,49 @@
+     <option name="LAST_COMMIT_MESSAGE" value="python接口编写" />
+   </component>
+   <component name="WindowStateProjectService">
+-    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611636302669">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1611636302669" />
+-    <state x="602" y="207" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610506534057">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="602" y="207" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1610506534057" />
+-    <state x="498" y="206" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1610451213018">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="498" y="206" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.834@0.0.1536.834" timestamp="1610451213018" />
+-    <state x="469" y="5" key="#run_test_pytest" timestamp="1611635845789">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="469" y="5" key="#run_test_pytest/0.0.1536.834@0.0.1536.834" timestamp="1611635845789" />
+-    <state x="395" y="96" key="#检查" timestamp="1610528838612">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="395" y="96" key="#检查/0.0.1536.834@0.0.1536.834" timestamp="1610528838612" />
+-    <state x="436" y="0" key="CommitChangelistDialog2" timestamp="1611631767232">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="436" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1611631767232" />
+-    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1613822878712">
++    <state x="318" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619277547770">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+-    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1613822878712" />
+-    <state x="748" y="148" key="FileChooserDialogImpl" timestamp="1617695374091">
++    <state x="318" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1619277547770" />
++    <state x="395" y="96" key="#检查" timestamp="1621758542676">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1280.689@0.0.1536.834" timestamp="1609151551866" />
+-    <state x="748" y="148" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1617695374091" />
+-    <state width="1493" height="281" key="GridCell.Tab.0.bottom" timestamp="1615454306906">
++    <state x="395" y="96" key="#检查/0.0.1536.834@0.0.1536.834" timestamp="1621758542676" />
++    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1621755766749">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+-    <state width="1493" height="281" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1615454306906" />
+-    <state width="1493" height="281" key="GridCell.Tab.0.center" timestamp="1615454306906">
++    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1621755766749" />
++    <state x="793" y="276" key="FileChooserDialogImpl" timestamp="1622380863704">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+-    <state width="1493" height="281" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1615454306906" />
+-    <state width="1493" height="281" key="GridCell.Tab.0.left" timestamp="1615454306906">
++    <state x="793" y="276" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1622380863704" />
++    <state width="1492" height="264" key="GridCell.Tab.0.bottom" timestamp="1624205228392">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+-    <state width="1493" height="281" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1615454306906" />
+-    <state width="1493" height="281" key="GridCell.Tab.0.right" timestamp="1615454306906">
++    <state width="1492" height="264" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1624205228392" />
++    <state width="1492" height="264" key="GridCell.Tab.0.center" timestamp="1624205228391">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+-    <state width="1493" height="281" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1615454306906" />
+-    <state width="1493" height="233" key="GridCell.Tab.1.bottom" timestamp="1614942505237">
++    <state width="1492" height="264" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1624205228391" />
++    <state width="1492" height="264" key="GridCell.Tab.0.left" timestamp="1624205228391">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+-    <state width="1493" height="233" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614942505237" />
+-    <state width="1493" height="233" key="GridCell.Tab.1.center" timestamp="1614942505236">
++    <state width="1492" height="264" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1624205228391" />
++    <state width="1492" height="264" key="GridCell.Tab.0.right" timestamp="1624205228391">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+-    <state width="1493" height="233" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1614942505236" />
+-    <state width="1493" height="233" key="GridCell.Tab.1.left" timestamp="1614942505236">
++    <state width="1492" height="264" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1624205228391" />
++    <state x="270" y="62" key="SettingsEditor" timestamp="1621756174452">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+-    <state width="1493" height="233" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1614942505236" />
+-    <state width="1493" height="233" key="GridCell.Tab.1.right" timestamp="1614942505237">
++    <state x="270" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1621756174452" />
++    <state x="468" y="133" width="599" height="592" key="find.popup" timestamp="1624204172770">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+-    <state width="1493" height="233" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1614942505237" />
+-    <state x="147" y="66" key="MergeDialog" timestamp="1610452391450">
++    <state x="468" y="133" width="599" height="592" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1624204172770" />
++    <state x="430" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1619277573729">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+-    <state x="147" y="66" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1610452391450" />
+-    <state x="397" y="170" key="MultipleFileMergeDialog" timestamp="1610452391456">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="397" y="170" key="MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1610452391456" />
+-    <state x="270" y="62" key="SettingsEditor" timestamp="1617695605927">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="270" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1617695605927" />
+-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1613822557561">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1613822557561" />
+-    <state x="590" y="327" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609984421524">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="590" y="327" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1609984421524" />
+-    <state x="277" y="167" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1611308804221">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="277" y="167" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.834@0.0.1536.834" timestamp="1611308804221" />
+-    <state x="468" y="133" width="599" height="634" key="find.popup" timestamp="1610521955878">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="468" y="133" width="599" height="634" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1610521955878" />
+-    <state x="533" y="285" width="573" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1611021457185">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="533" y="285" width="573" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.834@0.0.1536.834" timestamp="1611021457185" />
+-    <state x="430" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1611281782757">
+-      <screen x="0" y="0" width="1536" height="834" />
+-    </state>
+-    <state x="430" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1611281782757" />
++    <state x="430" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1619277573729" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.7 (venv)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision 503a38aacc0295e3a8f00363c3628a616e0e05af)
++++ .idea/misc.xml	(date 1621756175572)
+@@ -1,4 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (venv)" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (test_project)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file

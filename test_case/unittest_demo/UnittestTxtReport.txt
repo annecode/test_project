@@ -1,0 +1,252 @@
+test_001_add (testclass_1.TestCalculator1)
+Test method add(a, b) ... ok
+test_002_minus (testclass_1.TestCalculator1)
+Test method minus(a, b) ... ok
+test_003_multi (testclass_1.TestCalculator1)
+Test method multi(a, b) ... ok
+test_004_divsion (testclass_1.TestCalculator1)
+Test method divsion(a, b) ... ok
+test_001_add (testclass_2.TestCalculator2)
+Test method add(a, b) ... skipped 'ï¿½ï¿½Ö´ï¿½Ğ¼Ó·ï¿½ï¿½ï¿½ï¿½ï¿½'
+test_002_minus (testclass_2.TestCalculator2)
+Test method minus(a, b) ... skipped 'linuxÏµÍ³ï¿½Å¿ï¿½Ö´ï¿½ï¿½'
+test_003_multi (testclass_2.TestCalculator2)
+Test method multi(a, b) ... unexpected success
+test_004_divsion (testclass_2.TestCalculator2)
+Test method divsion(a, b) ... skipped 'windowsÏµÍ³ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+FAILED (skipped=3, unexpected successes=1)
+=======
+test_001_add (testclass_2.TestCalculator2)
+Test method add(a, b) ... skipped 'ä¸æ‰§è¡ŒåŠ æ³•ç”¨ä¾‹'
+test_002_minus (testclass_2.TestCalculator2)
+Test method minus(a, b) ... skipped 'linuxç³»ç»Ÿæ‰å¯æ‰§è¡Œ'
+test_003_multi (testclass_2.TestCalculator2)
+Test method multi(a, b) ... unexpected success
+test_004_divsion (testclass_2.TestCalculator2)
+Test method divsion(a, b) ... skipped 'windowsç³»ç»Ÿä¸å¯æ‰§è¡Œ'
+>>>>>>> a1e3d05131bfba1bb5945afc0a1fa254055a00c1
+test_001_add (testclass_1.TestCalculator1)
+Test method add(a, b) ... ok
+test_002_minus (testclass_1.TestCalculator1)
+Test method minus(a, b) ... ok
+test_003_multi (testclass_1.TestCalculator1)
+Test method multi(a, b) ... ok
+test_004_divsion (testclass_1.TestCalculator1)
+Test method divsion(a, b) ... ok
+<<<<<<< HEAD
+test_001_add (testclass_2.TestCalculator2)
+Test method add(a, b) ... skipped 'ï¿½ï¿½Ö´ï¿½Ğ¼Ó·ï¿½ï¿½ï¿½ï¿½ï¿½'
+test_002_minus (testclass_2.TestCalculator2)
+Test method minus(a, b) ... skipped 'linuxÏµÍ³ï¿½Å¿ï¿½Ö´ï¿½ï¿½'
+test_003_multi (testclass_2.TestCalculator2)
+Test method multi(a, b) ... unexpected success
+test_004_divsion (testclass_2.TestCalculator2)
+Test method divsion(a, b) ... skipped 'windowsÏµÍ³ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+FAILED (skipped=3, unexpected successes=1)
+=======
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.005s
+
+FAILED (skipped=3, unexpected successes=1)
+test_001_add (testclass_2.TestCalculator2)
+Test method add(a, b) ... skipped 'ä¸æ‰§è¡ŒåŠ æ³•ç”¨ä¾‹'
+test_002_minus (testclass_2.TestCalculator2)
+Test method minus(a, b) ... skipped 'linuxç³»ç»Ÿæ‰å¯æ‰§è¡Œ'
+test_003_multi (testclass_2.TestCalculator2)
+Test method multi(a, b) ... unexpected success
+test_004_divsion (testclass_2.TestCalculator2)
+Test method divsion(a, b) ... skipped 'windowsç³»ç»Ÿä¸å¯æ‰§è¡Œ'
+>>>>>>> a1e3d05131bfba1bb5945afc0a1fa254055a00c1
+test_001_add (testclass_1.TestCalculator1)
+Test method add(a, b) ... ok
+test_002_minus (testclass_1.TestCalculator1)
+Test method minus(a, b) ... ok
+test_003_multi (testclass_1.TestCalculator1)
+Test method multi(a, b) ... ok
+test_004_divsion (testclass_1.TestCalculator1)
+Test method divsion(a, b) ... ok
+<<<<<<< HEAD
+test_001_add (testclass_2.TestCalculator2)
+Test method add(a, b) ... skipped 'ï¿½ï¿½Ö´ï¿½Ğ¼Ó·ï¿½ï¿½ï¿½ï¿½ï¿½'
+test_002_minus (testclass_2.TestCalculator2)
+Test method minus(a, b) ... skipped 'linuxÏµÍ³ï¿½Å¿ï¿½Ö´ï¿½ï¿½'
+test_003_multi (testclass_2.TestCalculator2)
+Test method multi(a, b) ... unexpected success
+test_004_divsion (testclass_2.TestCalculator2)
+Test method divsion(a, b) ... skipped 'windowsÏµÍ³ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.005s
+=======
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+>>>>>>> a1e3d05131bfba1bb5945afc0a1fa254055a00c1
+
+FAILED (skipped=3, unexpected successes=1)
+test_001_add (test_case.unittest_demo.testclass_2.TestCalculator2)
+Test method add(a, b) ... skipped 'ï¿½ï¿½Ö´ï¿½Ğ¼Ó·ï¿½ï¿½ï¿½ï¿½ï¿½'
+test_002_minus (test_case.unittest_demo.testclass_2.TestCalculator2)
+Test method minus(a, b) ... skipped 'linuxÏµÍ³ï¿½Å¿ï¿½Ö´ï¿½ï¿½'
+test_003_multi (test_case.unittest_demo.testclass_2.TestCalculator2)
+Test method multi(a, b) ... unexpected success
+test_004_divsion (test_case.unittest_demo.testclass_2.TestCalculator2)
+Test method divsion(a, b) ... skipped 'windowsÏµÍ³ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½'
+test_001_add (test_case.unittest_demo.testclass_1.TestCalculator1)
+Test method add(a, b) ... ok
+test_002_minus (test_case.unittest_demo.testclass_1.TestCalculator1)
+Test method minus(a, b) ... ok
+test_003_multi (test_case.unittest_demo.testclass_1.TestCalculator1)
+Test method multi(a, b) ... ok
+test_004_divsion (test_case.unittest_demo.testclass_1.TestCalculator1)
+Test method divsion(a, b) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.005s
+
+FAILED (skipped=3, unexpected successes=1)
+test_joke (api_demo.test_joke1.TestApi1) ... ok
+test_joke_get (api_demo.test_joke2.TestApi2)
+²âÊÔ»ñÈ¡Ğ¦»°½Ó¿Ú-get ... ok
+test_joke_post (api_demo.test_joke2.TestApi2)
+²âÊÔ»ñÈ¡Ğ¦»°½Ó¿Ú-post ... ok
+test_01_generate (api_demo.test_qrcode.TestQRCode)
+Éú³É¶şÎ¬Âë½Ó¿Ú²âÊÔ ... ok
+test_02_get_imgUrl (api_demo.test_qrcode.TestQRCode)
+Ê¶±ğ¶şÎ¬ÂëÍ¼Æ¬µØÖ·½Ó¿Ú²âÊÔ ... ok
+test_03_get_imgUrl (api_demo.test_qrcode.TestQRCode)
+Ê¶±ğ¶şÎ¬ÂëÎÄ¼ş½Ó¿Ú²âÊÔ ... ERROR
+test_add_1__1__2__3__6_ (ddt_parameterized_demo.test_ddt_1.TestAdd)
+²âÊÔ3¸öÊıµÄ¼Ó·¨ ... ok
+test_add_2__2__3__4__9_ (ddt_parameterized_demo.test_ddt_1.TestAdd)
+²âÊÔ3¸öÊıµÄ¼Ó·¨ ... ok
+test_factorial_1__1__1_ (ddt_parameterized_demo.test_ddt_2.MyTest)
+²âÊÔ½×³Ë ... ok
+test_factorial_2__3__4_ (ddt_parameterized_demo.test_ddt_2.MyTest)
+²âÊÔ½×³Ë ... FAIL
+test_str_1___anne__ (ddt_parameterized_demo.test_ddt_2.MyTest)
+²âÊÔ×Ö·û´®´«²Î ... ok
+test_str_2___hello__ (ddt_parameterized_demo.test_ddt_2.MyTest)
+²âÊÔ×Ö·û´®´«²Î ... ok
+test_values_1__1__1_ (ddt_parameterized_demo.test_ddt_2.MyTest)
+²âÊÔÁ½¸öÊıµÄ´óĞ¡ ... ok
+test_values_2__2__4_ (ddt_parameterized_demo.test_ddt_2.MyTest)
+²âÊÔÁ½¸öÊıµÄ´óĞ¡ ... ok
+test_url_1_https___book_douban_com_subject_26979890_ (ddt_parameterized_demo.test_ddt_douban.TestDoubanApi)
+²âÊÔ¶¹°êÍøÒ³ËùÓĞurl ... FAIL
+test_print_1___anne___20_ (ddt_parameterized_demo.test_ddt_excel.TestExcelOutput)
+²âÊÔexcelÊı¾İÀïÊÇ·ñÓĞanne ... ok
+test_print_2___liao___27_ (ddt_parameterized_demo.test_ddt_excel.TestExcelOutput)
+²âÊÔexcelÊı¾İÀïÊÇ·ñÓĞanne ... ok
+test_print_3___john___25_ (ddt_parameterized_demo.test_ddt_excel.TestExcelOutput)
+²âÊÔexcelÊı¾İÀïÊÇ·ñÓĞanne ... ok
+test_print_4___harry___30_ (ddt_parameterized_demo.test_ddt_excel.TestExcelOutput)
+²âÊÔexcelÊı¾İÀïÊÇ·ñÓĞanne ... ok
+test_factorial_1_1_1 (ddt_parameterized_demo.test_ddt_txt.TestFactorial)
+test_factorial_1_1_1 ... ok
+test_factorial_2_2_2 (ddt_parameterized_demo.test_ddt_txt.TestFactorial)
+test_factorial_2_2_2 ... ok
+test_factorial_3_3_6 (ddt_parameterized_demo.test_ddt_txt.TestFactorial)
+test_factorial_3_3_6 ... ok
+test_factorial_4_4_24 (ddt_parameterized_demo.test_ddt_txt.TestFactorial)
+test_factorial_4_4_24 ... ok
+test_factorial_5_5_120 (ddt_parameterized_demo.test_ddt_txt.TestFactorial)
+test_factorial_5_5_120 ... ok
+test_factorial_6_6_720 (ddt_parameterized_demo.test_ddt_txt.TestFactorial)
+test_factorial_6_6_720 ... ok
+test_001_values_0 (ddt_parameterized_demo.test_parameterized.MyTest)
+²âÊÔ±È´óĞ¡ [with first=3, second=1] ... ok
+test_001_values_1 (ddt_parameterized_demo.test_parameterized.MyTest)
+²âÊÔ±È´óĞ¡ [with first=1, second=0] ... ok
+test_001_values_2 (ddt_parameterized_demo.test_parameterized.MyTest)
+²âÊÔ±È´óĞ¡ [with first=2, second=1] ... ok
+test_001_values_3 (ddt_parameterized_demo.test_parameterized.MyTest)
+²âÊÔ±È´óĞ¡ [with first=4, second=3] ... ok
+test_002_values_0_anne (ddt_parameterized_demo.test_parameterized.MyTest)
+²âÊÔÖµÊÇ·ñÎªÕæ [with value='anne'] ... ok
+test_002_values_1_name (ddt_parameterized_demo.test_parameterized.MyTest)
+²âÊÔÖµÊÇ·ñÎªÕæ [with value='name'] ... ok
+test_002_values_2 (ddt_parameterized_demo.test_parameterized.MyTest)
+²âÊÔÖµÊÇ·ñÎªÕæ [with value=2] ... ok
+test_001_add (mock_demo.test_mock1.MockDemo)
+mock¼Ó·¨¼ÆËã·½·¨£¬return_value·µ»Ø ... ok
+test_002_add (mock_demo.test_mock1.MockDemo)
+mock¼Ó·¨¼ÆËã·½·¨£¬side_effect·µ»Ø ... FAIL
+test_001_wrong (mock_demo.test_mock2.TestPayLevel)
+Ê¹ÓÃ×°ÊÎÆ÷½øĞĞmock£¬Â·¾¶¾ßÌåµ½ÀàÃû ... ok
+test_002_second_level (mock_demo.test_mock2.TestPayLevel)
+Ê¹ÓÃ×°ÊÎÆ÷½øĞĞmock£¬Â·¾¶¾ßÌåµ½·½·¨Ãû ... ok
+test_003_no_level (mock_demo.test_mock2.TestPayLevel)
+Ê¹ÓÃobject()·½·¨£¬Ö±½Ó´«Àà£¬·½·¨£¬mockËùÓĞÀàĞÍµÄ¶ÔÏó ... ok
+test_004_first_level (mock_demo.test_mock2.TestPayLevel)
+²»Ê¹ÓÃ×°ÊÎÆ÷£¬Ê¹ÓÃobject()·½·¨ ... ok
+test_001_add (unittest_demo.testclass_1.TestCalculator1)
+Test method add(a, b) ... ok
+test_002_minus (unittest_demo.testclass_1.TestCalculator1)
+Test method minus(a, b) ... ok
+test_003_multi (unittest_demo.testclass_1.TestCalculator1)
+Test method multi(a, b) ... ok
+test_004_divsion (unittest_demo.testclass_1.TestCalculator1)
+Test method divsion(a, b) ... ok
+test_001_add (unittest_demo.testclass_2.TestCalculator2)
+Test method add(a, b) ... skipped '²»Ö´ĞĞ¼Ó·¨ÓÃÀı'
+test_002_minus (unittest_demo.testclass_2.TestCalculator2)
+Test method minus(a, b) ... skipped 'linuxÏµÍ³²Å¿ÉÖ´ĞĞ'
+test_003_multi (unittest_demo.testclass_2.TestCalculator2)
+Test method multi(a, b) ... unexpected success
+test_004_divsion (unittest_demo.testclass_2.TestCalculator2)
+Test method divsion(a, b) ... skipped 'windowsÏµÍ³²»¿ÉÖ´ĞĞ'
+
+======================================================================
+ERROR: test_03_get_imgUrl (api_demo.test_qrcode.TestQRCode)
+Ê¶±ğ¶şÎ¬ÂëÎÄ¼ş½Ó¿Ú²âÊÔ
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\workspace\PycharmProject\test_project\test_case\api_demo\test_qrcode.py", line 54, in test_03_get_imgUrl
+    file = {"img": open("%s" % file_path, 'rb')}
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\test\\anne_qrcode.png'
+
+======================================================================
+FAIL: test_factorial_2__3__4_ (ddt_parameterized_demo.test_ddt_2.MyTest)
+²âÊÔ½×³Ë
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\workspace\PycharmProject\test_project\venv\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\workspace\PycharmProject\test_project\test_case\ddt_parameterized_demo\test_ddt_2.py", line 25, in test_factorial
+    self.assertEqual(res, exceptdata)
+AssertionError: 9 != 4
+
+======================================================================
+FAIL: test_url_1_https___book_douban_com_subject_26979890_ (ddt_parameterized_demo.test_ddt_douban.TestDoubanApi)
+²âÊÔ¶¹°êÍøÒ³ËùÓĞurl
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\workspace\PycharmProject\test_project\venv\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\workspace\PycharmProject\test_project\test_case\ddt_parameterized_demo\test_ddt_douban.py", line 45, in test_url
+    self.assertLessEqual(res_time, 1, '½Ó¿ÚÏìÓ¦´óÓÚ1s')
+AssertionError: 4.034672 not less than or equal to 1 : ½Ó¿ÚÏìÓ¦´óÓÚ1s
+
+======================================================================
+FAIL: test_002_add (mock_demo.test_mock1.MockDemo)
+mock¼Ó·¨¼ÆËã·½·¨£¬side_effect·µ»Ø
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\workspace\PycharmProject\test_project\test_case\mock_demo\test_mock1.py", line 34, in test_002_add
+    self.assertEqual(13, result)
+AssertionError: 13 != 1
+
+----------------------------------------------------------------------
+Ran 46 tests in 4.954s
+
+FAILED (failures=3, errors=1, skipped=3, unexpected successes=1)

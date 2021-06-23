@@ -8,7 +8,6 @@ import time
 from tenacity import retry, wait_fixed, stop_after_attempt, stop_after_delay
 
 
-
 @retry
 def test_001_retry():
     print("等待重试，重试无间隔执行...")

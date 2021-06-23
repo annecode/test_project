@@ -16,9 +16,9 @@ class TestApi1(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.url = 'http://route.showapi.com/'
 
-    # @classmethod
-    # def tearDownClass(cls):
-    #     print('finished!')
+    @classmethod
+    def tearDownClass(cls):
+        print('finished!')
 
     @log_print
     def test_joke(self):

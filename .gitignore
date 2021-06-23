@@ -6,3 +6,5 @@
 /common/api_test.py
 /test_case/yaml/*
 /test_case/company_api/*
+.pytest_cache/*
+test_project_venv/*
