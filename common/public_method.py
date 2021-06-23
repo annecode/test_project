@@ -56,15 +56,12 @@ def log_print(func):
         logging.info(f'{func.__name__}接口耗时%.3f' % (after - before))
     return wrapper
 
-
 def get_do(input_key):
     output_value = m.get(input_key)
     return output_value
 
-
 def your_func():
     pass
-
 
 # 动态传参自定义函数
 def map_func(func_name, *args, **kwargs):
@@ -192,7 +189,7 @@ if __name__ == '__main__':
     data = {"info": "2 grade",
             "grades": {"xm": [{"chinese": 60}, {"math": 80}, {"english": 100}],
                        "xh": [{"chinese": 90}, {"math": 70}, {"english": 50}],
-                       "xl": [{"chinese": 80}, {"math": 80}, {"english": 80}],
+                       "xl": [{"chinese": '{{hello}}'}, {"math": 80}, {"english": 80}],
                        },
             "newGrades": {"info": "new data",
                           "newChinese": 77
@@ -201,11 +198,12 @@ if __name__ == '__main__':
     # target = "xl"
     # result = get_value_from_json(data, target)
     # print(result)
-    fields = ["xm", "english", "newChinese"]
-    res = get_key(data, fields)
-    print(res)
-    # 使用参数让json数据格式化输出
-    res_final = json.dumps(res, sort_keys=True, indent=4, separators=(',', ':'))
-    print(res_final)
-
-    # time_mktime()
+    # fields = ["xm", "english", "newChinese"]
+    # res = get_key(data, fields)
+    # print(res)
+    # # 使用参数让json数据格式化输出
+    # res_final = json.dumps(res, sort_keys=True, indent=4, separators=(',', ':'))
+    # print(res_final)
+    get_do()
+    a = dynamic_parameter(data)
+    print(a)
