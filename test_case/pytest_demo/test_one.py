@@ -47,7 +47,7 @@ def test_005_zero_divsion():
     with pytest.raises(ZeroDivisionError):
         pytest.assume(1 / 1)
         # pytest.assume(1 / 0)
-        # raise ZeroDivisionError("second argument must != 0")
+        raise ZeroDivisionError("second argument must != 0")
 
 
 # @pytest.mark.flaky(reruns=2, reruns_delay=2)

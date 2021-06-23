@@ -10,3 +10,4 @@ smoke = pytest.mark.smoke
 test = pytest.mark.test
 pre = pytest.mark.pre
 prod = pytest.mark.prod
+flaky = pytest.mark.flaky
