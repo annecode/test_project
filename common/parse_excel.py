@@ -4,6 +4,7 @@
 # datetime: 2020-12-14 23:11
 # filename: test_project/parse_excel
 
+import os
 from openpyxl import load_workbook
 
 
@@ -22,7 +23,7 @@ class ParseExcel:
 
 
 if __name__ == '__main__':
-    excelPath = r'../test_data/data_excel.xlsx'
+    excelPath = os.path.join(os.path.dirname(__file__), '../test_data/data_excel.xlsx')
     sheetName = 'testcase1'
     excel = ParseExcel(excelPath, sheetName)
     result = excel.get_datas_from_sheet()
