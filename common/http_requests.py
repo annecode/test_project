@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # author: anne
 # datetime: 2020-12-04 11:10
-# filename: test_project/http_requsts
+# filename: test_project/http_requests
 
 
 import requests
@@ -26,10 +26,10 @@ class HttpRequests(object):
     @staticmethod
     def k_v(data):
         if isinstance(data, dict):
-            str = ''
+            temp = ''
             for k, v in data.items():
-                str += f'{k}={v}&'
-            return str[:-1]
+                temp += f'{k}={v}&'
+            return temp[:-1]
         else:
             print('data必须是字典')
 

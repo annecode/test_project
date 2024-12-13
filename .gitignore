@@ -1,10 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template
 # 自定义忽略文件
-/venv/*
+.venv/*
+.idea/*
 /report/*
-/common/api_test.py
 /test_case/yaml/*
 /test_case/company_api/*
 .pytest_cache/*
-test_project_venv/*
